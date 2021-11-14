@@ -8,10 +8,6 @@
   @extend %unselectable;
 }
 
-.rounded {
-  border-radius: var(--due-radius) !important;
-}
-
 .stretched-link {
   &::after {
     content: "";
@@ -22,11 +18,6 @@
     left: 0;
     z-index: 1;
   }
-}
-
-.stretched-fullwidth {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
 }
 
 // https://web.dev/centering-in-css/

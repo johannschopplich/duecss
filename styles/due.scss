@@ -1,15 +1,8 @@
-// Base
 @use "base/all";
 
-// Layout
-@use "layout/columns";
-@use "layout/container";
-@use "layout/section";
-@use "layout/stack";
-
-// Components
-@use "components/button";
+@use "components/container";
+@use "components/columns";
 @use "components/content";
+@use "components/button";
 @use "components/form";
 @use "components/table";
-@use "components/title";

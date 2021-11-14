@@ -9,7 +9,7 @@ import type { Preset } from 'unocss'
  * ```js
  * // unocss.config.js
  * import { presetUno } from 'unocss'
- * import { presetDue } from 'unocss-preset-due'
+ * import { presetDue } from 'duecss'
  *
  * export default defineConfig({
  *   presets: [

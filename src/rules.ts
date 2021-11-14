@@ -11,7 +11,6 @@ export const rules: Rule[] = [
       return `
 .${e(rawSelector)} {
   display: grid;
-  grid-template-areas: "stack";
 }
 .${e(rawSelector)}::before {
   content: '';
@@ -20,7 +19,7 @@ export const rules: Rule[] = [
 }
 .${e(rawSelector)}::before,
 .${e(rawSelector)} > * {
-  grid-area: stack;
+  grid-area: 1 / 1 / 1 / 1;
 }
 `
     }

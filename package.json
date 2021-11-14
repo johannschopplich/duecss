@@ -28,7 +28,8 @@
     "./theme": {
       "require": "./dist/theme.js",
       "import": "./dist/theme.mjs"
-    }
+    },
+    "./*": "./styles/*"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

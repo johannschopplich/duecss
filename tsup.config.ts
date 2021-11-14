@@ -4,7 +4,7 @@ const config: Options = {
   splitting: true,
   format: ['esm', 'cjs'],
   entryPoints: ['src/*.ts'],
-  target: 'es2018',
+  target: 'es2020',
   clean: true,
   dts: true
 }

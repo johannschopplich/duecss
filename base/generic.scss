@@ -1,0 +1,123 @@
+@use '../abstracts/functions';
+
+//
+// Document
+//
+
+html {
+  // Scales the `font-size` from a minimum of 16px (at a 320px viewport) to a
+  // maximum of 18px (at a 1280px viewport)
+  @include functions.fluid-scale(16px, 18px);
+  min-width: 320px;
+  background-color: var(--color-background, white);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+//
+// Sections
+//
+
+body {
+  block-size: -webkit-fill-available;
+  block-size: -moz-available;
+  block-size: stretch;
+  font-family: var(--font-family-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+}
+
+//
+// Grouping content
+//
+
+[id] {
+  scroll-margin-top: 2ex;
+}
+
+hr {
+  border-top-color: var(--color-border);
+  margin: var(--due-spacer) auto;
+}
+
+//
+// Links
+//
+
+a {
+  cursor: pointer;
+  color: var(--color-link);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-color: currentcolor;
+  text-decoration-thickness: auto;
+  text-decoration-skip-ink: auto;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+//
+// Text-level semantics
+//
+
+mark {
+  background-color: hsl(46, 100%, 85%);
+  color: inherit;
+}
+
+code {
+  background-color: var(--color-contrast-lowest);
+  color: var(--color-contrast-higher);
+  font-size: 0.875em;
+  padding: var(--space-xxxs) var(--space-xs);
+}
+
+pre {
+  background-color: var(--color-contrast-lowest);
+  font-size: 0.875em;
+  padding: var(--space-s) 1rem;
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+
+  code {
+    background-color: transparent;
+    color: currentColor;
+    font-size: 1em;
+    padding: 0;
+  }
+}
+
+//
+// Embedded content
+//
+
+// Change the fill color to match the text color
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+//
+// Form-associated content
+//
+
+label {
+  display: inline-block;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  padding: 0.25em 0.375em;
+}
+
+button {
+  touch-action: manipulation;
+}

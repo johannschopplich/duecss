@@ -1,0 +1,39 @@
+@use "../abstracts/mixins";
+
+.block {
+  @extend %block;
+}
+
+.unselectable {
+  @extend %unselectable;
+}
+
+.rounded {
+  border-radius: var(--due-radius) !important;
+}
+
+.stretched-link {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.stretched-fullwidth {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+// https://web.dev/centering-in-css/
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
+}

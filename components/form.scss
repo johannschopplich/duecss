@@ -1,0 +1,93 @@
+@use "../abstracts/mixins";
+
+//
+// Labels
+//
+
+.label {
+  padding-bottom: var(--space-xxs);
+}
+
+//
+// Textual form controls
+//
+
+.control {
+  @extend %control;
+  width: 100%;
+  justify-content: flex-start;
+  background-color: var(--color-background);
+  border-color: var(--color-contrast-low);
+  color: var(--color-text);
+  padding: var(--space-xxs) var(--space-xs);
+  @include mixins.transition(box-shadow 150ms ease-in-out);
+
+  &:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-lucent);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--color-contrast-low);
+    opacity: 1;
+  }
+
+  &[aria-invalid="true"],
+  &.is-error {
+    border-color: var(--color-danger);
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-danger-lucent);
+    }
+  }
+
+  &.is-success {
+    border-color: var(--color-success);
+    &:focus {
+      box-shadow: 0 0 0 3px var(--color-success-lucent);
+    }
+  }
+
+  &:read-only,
+  &:disabled {
+    background-color: var(--color-contrast-lowest);
+    border-color: var(--color-contrast-lowest);
+    color: var(--color-contrast-medium);
+  }
+
+  //
+  // Modifiers
+  //
+
+  &.is-fullwidth {
+    display: block;
+    width: 100%;
+  }
+
+  &.is-inline {
+    display: inline;
+    width: auto;
+  }
+}
+
+textarea.control {
+  display: block;
+
+  &:not([rows]) {
+    min-height: 8em;
+    max-height: 40em;
+  }
+}
+
+.help {
+  font-size: var(--text-7);
+  margin-top: var(--space-xs);
+
+  &.is-error {
+    color: var(--color-danger);
+  }
+
+  &.is-success {
+    color: var(--color-success);
+  }
+}

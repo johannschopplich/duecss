@@ -1,0 +1,176 @@
+@use "../abstracts/mixins";
+
+.button {
+  @extend %control;
+  @extend %unselectable;
+  justify-content: center;
+  background-color: var(--color-background);
+  border-color: var(--color-contrast-low);
+  color: var(--color-text);
+  line-height: 1;
+  padding: var(--space-xs);
+  text-align: center;
+  white-space: nowrap;
+  @include mixins.transition(box-shadow 150ms ease-in-out);
+
+  &:hover {
+    border-color: var(--color-text);
+    color: var(--color-text);
+  }
+
+  &:focus {
+    border-color: var(--color-primary);
+    color: var(--color-text);
+    outline: none;
+    &:not(:active) {
+      box-shadow: 0 0 0 3px var(--color-primary-lucent);
+    }
+  }
+
+  &:active {
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+    color: var(--color-background);
+  }
+
+  //
+  // Text & link buttons
+  //
+
+  &.is-text,
+  &.is-link {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-text);
+
+    &:disabled {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &.is-text {
+    &:hover,
+    &:focus {
+      text-decoration-line: underline;
+    }
+  }
+
+  &.is-link {
+    &:hover,
+    &:focus {
+      background-color: var(--color-contrast-lowest);
+    }
+  }
+
+  //
+  // Colored buttons
+  //
+
+  &.is-primary,
+  &.is-accent {
+    --button-color: white;
+    --button-background: var(--color-primary);
+    --button-background-hover: var(--color-primary-hover);
+    --button-background-active: var(--color-primary-active);
+    --button-shadow: var(--color-primary-lucent);
+
+    background-color: var(--button-background);
+    border-color: transparent;
+    color: var(--button-color);
+
+    &:hover {
+      background-color: var(--button-background-hover);
+      border-color: transparent;
+      color: var(--button-color);
+    }
+
+    &:focus {
+      border-color: transparent;
+      color: var(--button-color);
+      &:not(:active) {
+        box-shadow: 0 0 0 3px var(--button-shadow);
+      }
+    }
+
+    &:active {
+      background-color: var(--button-background-active);
+      border-color: transparent;
+      color: var(--button-color);
+    }
+
+    &:disabled {
+      background-color: var(--button-background);
+      border-color: transparent;
+      color: var(--button-color);
+      box-shadow: none;
+    }
+
+    //
+    // Outlined variant
+    //
+
+    &.is-outlined {
+      background-color: transparent;
+      border-color: var(--button-background);
+      color: var(--button-background);
+
+      &:hover,
+      &:focus {
+        background-color: var(--button-background);
+        border-color: var(--button-background);
+        color: var(--button-color);
+      }
+
+      &:disabled {
+        background-color: transparent;
+        border-color: var(--button-background);
+        color: var(--button-background);
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.is-accent {
+    --button-background: var(--color-accent);
+    --button-background-hover: var(--color-accent-hover);
+    --button-background-active: var(--color-accent-active);
+    --button-shadow: var(--color-accent-lucent);
+  }
+
+  //
+  // Sizes
+  //
+
+  &.is-s {
+    font-size: var(--text-7);
+    padding: var(--space-xxs);
+  }
+
+  &.is-m {
+    font-size: var(--text-5);
+  }
+
+  &.is-l {
+    font-size: var(--text-4);
+    padding: var(--space-s);
+  }
+
+  //
+  // Modifiers
+  //
+
+  &:disabled {
+    background-color: var(--color-background);
+    border-color: var(--color-contrast-lower);
+    color: var(--color-text);
+    box-shadow: none;
+    opacity: 0.5;
+  }
+
+  &.is-fullwidth {
+    display: flex;
+    width: 100%;
+  }
+}

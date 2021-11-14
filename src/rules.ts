@@ -1,0 +1,28 @@
+import { escapeSelector as e } from 'unocss'
+import type { Rule } from 'unocss'
+
+export const rules: Rule[] = [
+  [/^font-size-(\w+)$/, ([, w]) => ({ 'font-size': `var(--text-${w})` })],
+  [
+    /^aspect-ratio-(\d+):(\d+)$/,
+    ([, w, h], { rawSelector, currentSelector, variantHandlers, theme }) => {
+      if (variantHandlers.length) return
+
+      return `
+.${e(rawSelector)} {
+  display: grid;
+  grid-template-areas: "stack";
+}
+.${e(rawSelector)}::before {
+  content: '';
+  display: block;
+  padding-bottom: ${(100 / (+w / +h)).toFixed(2)}%;
+}
+.${e(rawSelector)}::before,
+.${e(rawSelector)} > * {
+  grid-area: stack;
+}
+`
+    }
+  ]
+]

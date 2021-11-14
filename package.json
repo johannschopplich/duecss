@@ -1,0 +1,55 @@
+{
+  "name": "duecss",
+  "version": "0.0.0",
+  "description": "Minimal CSS framework built upon & extended by UnoCSS",
+  "keywords": [
+    "unocss",
+    "unocss-preset"
+  ],
+  "homepage": "https://github.com/johannschopplich/duecss#readme",
+  "bugs": {
+    "url": "https://github.com/johannschopplich/duecss/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannschopplich/duecss.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Johann Schopplich",
+    "email": "pkg@johannschopplich.com",
+    "url": "https://johannschopplich.com"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./theme": {
+      "require": "./dist/theme.js",
+      "import": "./dist/theme.mjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "**/*.scss"
+  ],
+  "scripts": {
+    "dev": "tsup --watch src",
+    "build": "tsup",
+    "release": "bumpp package.json --commit --push --tag"
+  },
+  "peerDependencies": {
+    "unocss": "^0.9.3"
+  },
+  "devDependencies": {
+    "bumpp": "^7.1.1",
+    "prettier": "^2.4.1",
+    "tsup": "^5.7.0",
+    "typescript": "^4.4.4",
+    "unocss": "^0.9.3"
+  }
+}

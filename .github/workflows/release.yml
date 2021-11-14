@@ -32,7 +32,7 @@ jobs:
         env:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
-      # - run: pnpm run build
+      - run: pnpm run build
 
       - run: pnpm publish --access public --no-git-checks
         env:

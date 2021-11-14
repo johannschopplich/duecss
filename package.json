@@ -41,7 +41,7 @@
   "scripts": {
     "dev": "tsup --watch src",
     "build": "tsup",
-    "release": "pnpm run build && bumpp package.json --commit --push --tag"
+    "release": "bumpp package.json --commit --push --tag"
   },
   "peerDependencies": {
     "unocss": "^0.9.3"

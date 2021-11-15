@@ -2,16 +2,12 @@ import type { UserShortcuts } from 'unocss'
 
 export const shortcuts: UserShortcuts = [
   [
-    /^container-(sm|md|lg|xl|2xl)$/,
-    ([, bp]) => `relative due-w-container max-w-screen-${bp} mx-auto`
-  ],
-  [
-    /^container-(sm|md|lg|xl|2xl)-full$/,
-    ([, bp]) => `relative w-full max-w-screen-${bp} mx-auto`
+    /^container-?(sm|md|lg|xl|2xl)?-?(full)?$/,
+    // prettier-ignore
+    ([, bp, f]) => `relative ${f ? 'w-full' : 'due-w-container'} ${bp ? `max-w-screen-${bp}` : ''} mx-auto`
   ],
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {
-    container: 'relative due-w-container mx-auto',
     section: 'py-13',
     title: 'text-contrast-higher font-heading font-600 leading-heading',
     'centered-content': 'flex flex-col items-center justify-center',

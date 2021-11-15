@@ -4,7 +4,7 @@ export const shortcuts: UserShortcuts = [
   [
     /^container-?(sm|md|lg|xl|2xl)?-?(full)?$/,
     // prettier-ignore
-    ([, bp, f]) => `relative ${f ? 'w-full' : 'due-w-container'} ${bp ? `max-w-screen-${bp}` : ''} mx-auto`
+    ([, bp, f]) => `relative mx-auto ${f ? 'w-full' : 'due-w-container'}${bp ? ` max-w-screen-${bp}` : ''}`
   ],
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {

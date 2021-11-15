@@ -2,7 +2,6 @@
 
 .button {
   @extend %control;
-  @extend %unselectable;
   justify-content: center;
   background-color: var(--color-background);
   border-color: var(--color-contrast-low);
@@ -11,6 +10,9 @@
   padding: var(--space-xs);
   text-align: center;
   white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
   @include mixins.transition(box-shadow 150ms ease-in-out);
 
   &:hover {

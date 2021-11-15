@@ -20,7 +20,7 @@ export const theme: Theme = {
     primary: 'var(--color-primary)',
     accent: 'var(--color-accent)',
     link: {
-      default: 'var(--color-link)',
+      normal: 'var(--color-link)',
       hover: 'var(--color-link-hover)'
     },
     contrast: {

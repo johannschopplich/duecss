@@ -4,15 +4,13 @@ export const shortcuts: UserShortcuts = [
   [
     /^container(-fluid)?$/,
     ([, m]) =>
-      `relative ${
-        m ? 'mx-[var(--due-spacer)] w-full' : 'mx-auto due-w-container'
-      }`
+      `relative mx-${m ? '[var(--due-spacer)]' : 'auto due-w-container'}`
   ],
   [
     /^container-(sm|md|lg|xl|2xl)-?(full|fluid)?$/,
     ([, bp, m]) =>
       `relative mx-${m === 'fluid' ? '[var(--due-spacer)]' : 'auto'} ${
-        m === 'full' || m === 'fluid' ? 'w-full' : 'due-w-container'
+        m === 'full' ? 'w-full' : m !== 'fluid' ? 'due-w-container' : ''
       } max-w-screen-${bp}`
   ],
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],

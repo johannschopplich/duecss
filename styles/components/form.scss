@@ -1,6 +1,18 @@
 @use "../abstracts/mixins";
 
 //
+// Root
+//
+
+:root {
+  // Feedback colors
+  --color-success:           hsl(141, 71%, 48%);
+  --color-success-lucent:    hsla(141, 71%, 48%, 0.35);
+  --color-danger:            hsl(348, 100%, 61%);
+  --color-danger-lucent:     hsla(348, 100%, 61%, 0.35);
+}
+
+//
 // Labels
 //
 

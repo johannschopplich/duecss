@@ -75,7 +75,7 @@
     --button-color: white;
     --button-background: var(--color-primary);
     --button-background-hover: var(--color-primary-hover);
-    --button-background-active: var(--color-primary-active);
+    --button-background-active: var(--color-primary-hover);
     --button-shadow: var(--color-primary-lucent);
 
     background-color: var(--button-background);
@@ -137,7 +137,7 @@
   &.is-accent {
     --button-background: var(--color-accent);
     --button-background-hover: var(--color-accent-hover);
-    --button-background-active: var(--color-accent-active);
+    --button-background-active: var(--color-accent-hover);
     --button-shadow: var(--color-accent-lucent);
   }
 

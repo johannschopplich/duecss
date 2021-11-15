@@ -3,15 +3,15 @@ import type { UserShortcuts } from 'unocss'
 export const shortcuts: UserShortcuts = [
   [
     /^container-(sm|md|lg|xl|2xl)$/,
-    ([, bp]) => `relative max-w-screen-${bp} mx-auto px-[var(--due-spacer)]`
+    ([, bp]) => `relative due-w-container max-w-screen-${bp} mx-auto`
   ],
   [
     /^container-(sm|md|lg|xl|2xl)-full$/,
-    ([, bp]) => `relative max-w-screen-${bp} mx-auto`
+    ([, bp]) => `relative w-full max-w-screen-${bp} mx-auto`
   ],
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {
-    container: 'relative mx-auto px-[var(--due-spacer)]',
+    container: 'relative due-w-container mx-auto',
     section: 'py-13',
     title: 'text-contrast-higher font-heading font-600 leading-heading',
     'centered-content': 'flex flex-col items-center justify-center',

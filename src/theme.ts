@@ -19,6 +19,8 @@ export const theme: Theme = {
   colors: {
     primary: 'var(--color-primary)',
     accent: 'var(--color-accent)',
+    link: 'var(--color-link)',
+    'link-hover': 'var(--color-link-hover)',
     contrast: {
       lowest: 'var(--color-contrast-lowest)',
       lower: 'var(--color-contrast-lower)',

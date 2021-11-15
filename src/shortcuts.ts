@@ -2,13 +2,18 @@ import type { UserShortcuts } from 'unocss'
 
 export const shortcuts: UserShortcuts = [
   [
+    /^container-(full|fluid)$/,
+    ([, m]) =>
+      `relative ${m === 'fluid' ? 'mx-[var(--due-spacer)]' : 'mx-auto'} ${
+        m === 'full' ? 'w-full' : 'due-w-container'
+      }`
+  ],
+  [
     /^container-(sm|md|lg|xl|2xl)-?(full|fluid)?$/,
     ([, bp, m]) =>
-      'relative ' +
-      (m === 'fluid' ? 'mx-[var(--due-spacer)]' : 'mx-auto') +
-      ' ' +
-      (m === 'full' ? 'w-full' : 'due-w-container') +
-      (bp ? ` max-w-screen-${bp}` : '')
+      `relative ${m === 'fluid' ? 'mx-[var(--due-spacer)]' : 'mx-auto'} ${
+        m === 'full' ? 'w-full' : 'due-w-container'
+      }${bp ? ` max-w-screen-${bp}` : ''}`
   ],
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {

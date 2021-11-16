@@ -1,8 +1,6 @@
 import { theme } from './theme'
 import { rules } from './rules'
 import { shortcuts } from './shortcuts'
-import { deepMerge } from '@antfu/utils'
-import type { Theme } from './theme'
 import type { Preset } from 'unocss'
 
 /**
@@ -21,9 +19,9 @@ import type { Preset } from 'unocss'
  * })
  * ```
  */
-export const presetDue = (userThemeConfig: Theme = {}): Preset => ({
+export const presetDue = (): Preset => ({
   name: 'unocss-preset-due',
-  theme: deepMerge(theme, userThemeConfig ?? {}),
+  theme,
   rules,
   shortcuts
 })

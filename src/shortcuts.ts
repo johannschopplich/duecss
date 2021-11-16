@@ -26,9 +26,9 @@ export const shortcuts: UserShortcuts = [
     'column-auto': 'block flex-1 w-auto',
     'column-full': 'block flex-none w-full',
     'button-text': `${buttonBase} bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline`,
-    'button-primary': `${buttonBase} bg-primary border-transparent text-white hover:text-white hover:bg-primary-600 focus:bg-primary-600`,
-    'button-primary-outlined': `${buttonBase} bg-transparent border-primary text-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white`,
-    'button-accent': `${buttonBase} bg-accent border-transparent text-white hover:text-white hover:bg-accent-600 focus:bg-accent-600`,
-    'button-accent-outlined': `${buttonBase} bg-transparent border-accent text-accent hover:bg-accent hover:text-white focus:bg-accent focus:text-white`
+    'button-primary': `${buttonBase} bg-primary border-transparent text-white outline-color-primary-600 hover:text-white hover:bg-primary-600 focus:bg-primary-600`,
+    'button-primary-outlined': `${buttonBase} bg-transparent border-primary text-primary outline-color-primary-600 hover:bg-primary hover:text-white focus:bg-primary focus:text-white`,
+    'button-accent': `${buttonBase} bg-accent border-transparent text-white outline-color-accent-600 hover:text-white hover:bg-accent-600 focus:bg-accent-600`,
+    'button-accent-outlined': `${buttonBase} bg-transparent border-accent text-accent outline-color-accent-600 hover:bg-accent hover:text-white focus:bg-accent focus:text-white`
   }
 ]

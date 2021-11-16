@@ -1,5 +1,8 @@
 import type { UserShortcuts } from 'unocss'
 
+const buttonBase =
+  'due-rounded appearance-none unselectable inline-flex items-center justify-center border border-transparent leading-none px-3 py-2 disabled:opacity-50 disabled:text-theme-text'
+
 export const shortcuts: UserShortcuts = [
   [
     /^container(?:-(fluid))?$/,
@@ -22,17 +25,10 @@ export const shortcuts: UserShortcuts = [
     'column-narrow': 'block flex-grow-0 flex-shrink-0 flex-basis-auto w-auto',
     'column-auto': 'block flex-1 w-auto',
     'column-full': 'block flex-none w-full',
-    'due-button':
-      'due-rounded appearance-none unselectable inline-flex items-center justify-center border border-transparent px-3 py-2 disabled:opacity-50 disabled:text-theme-text',
-    'button-text':
-      'due-button bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline',
-    'button-primary':
-      'due-button bg-primary border-transparent text-white hover:text-white hover:bg-primary-600 focus:bg-primary-600',
-    'button-primary-outlined':
-      'due-button bg-transparent border-primary text-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white',
-    'button-accent':
-      'due-button bg-accent border-transparent text-white hover:text-white hover:bg-accent-600 focus:bg-accent-600',
-    'button-accent-outlined':
-      'due-button bg-transparent border-accent text-accent hover:bg-accent hover:text-white focus:bg-accent focus:text-white'
+    'button-text': `${buttonBase} bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline`,
+    'button-primary': `${buttonBase} bg-primary border-transparent text-white hover:text-white hover:bg-primary-600 focus:bg-primary-600`,
+    'button-primary-outlined': `${buttonBase} bg-transparent border-primary text-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white`,
+    'button-accent': `${buttonBase} bg-accent border-transparent text-white hover:text-white hover:bg-accent-600 focus:bg-accent-600`,
+    'button-accent-outlined': `${buttonBase} bg-transparent border-accent text-accent hover:bg-accent hover:text-white focus:bg-accent focus:text-white`
   }
 ]

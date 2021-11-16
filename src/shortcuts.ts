@@ -23,11 +23,13 @@ export const shortcuts: UserShortcuts = [
     'column-auto': 'block flex-1 w-auto',
     'column-full': 'block flex-none w-full',
     'due-button':
-      'due-rounded appearance-none unselectable inline-flex items-center justify-center border border-transparent leading-1 px-3 py-2 disabled:opacity-50 disabled:text-theme-text',
+      'due-rounded appearance-none unselectable inline-flex items-center justify-center border border-transparent px-3 py-2 disabled:opacity-50 disabled:text-theme-text',
     'button-text':
-      'due-button bg-transparent border-transparent text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline',
+      'due-button bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline',
     'button-primary':
-      'due-button bg-primary border-transparent text-white hover:bg-primary-600 focus:bg-primary-600',
+      'due-button bg-primary border-transparent text-white hover:text-white hover:bg-primary-600 focus:bg-primary-600',
+    'button-accent':
+      'due-button bg-accent border-transparent text-white hover:text-white hover:bg-accent-600 focus:bg-accent-600',
     'button-outlined':
       'due-button bg-transparent border-primary text-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white'
   }

@@ -1,9 +1,10 @@
 import { escapeSelector as e } from 'unocss'
 import type { Rule } from 'unocss'
 
-export const hyphenated: Rule = [
-  /^hyphenated$/,
-  ([], { rawSelector, currentSelector, variantHandlers, theme }) => `
+export const hyphenated: Rule[] = [
+  [
+    /^hyphenated$/,
+    ([], { rawSelector, currentSelector, variantHandlers, theme }) => `
 .${e(rawSelector)} {
   overflow-wrap: break-word;
 
@@ -22,4 +23,5 @@ export const hyphenated: Rule = [
   hyphenate-limit-zone: 8%;
 }
 `
+  ]
 ]

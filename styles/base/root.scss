@@ -3,17 +3,9 @@
 //
 
 :root {
-  // Primary colors
-  --color-primary:           hsl(224, 58%, 50%);
-  --color-primary-hover:     hsl(224, 58%, 58%);
-  --color-primary-lucent:    hsla(224, 58%, 50%, 0.35);
+  --color-primary:           #365DC9;
+  --color-accent:            #C9787C;
 
-  // Secondary/accent colors
-  --color-accent:            hsl(357, 43%, 63%);
-  --color-accent-hover:      hsl(357, 43%, 71%);
-  --color-accent-lucent:     hsla(357, 43%, 63%, 0.35);
-
-  // Typography
   --font-family-normal:      system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-family-heading:     var(--font-family-normal);
   --line-height-normal:      calc(1ex / 0.32);
@@ -38,7 +30,6 @@
   --space-xxl:               5.25rem;
   --space-xxxl:              8.5rem;
 
-  // Miscellaneous
   --due-spacer:              var(--space-m);
   --due-radius:              0.25rem;
 }

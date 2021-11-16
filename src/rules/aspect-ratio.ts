@@ -1,12 +1,13 @@
 import { escapeSelector as e } from 'unocss'
 import type { Rule } from 'unocss'
 
-export const aspectRatio: Rule = [
-  /^aspect-ratio-(\d+):(\d+)$/,
-  ([, w, h], { rawSelector, currentSelector, variantHandlers, theme }) => {
-    if (variantHandlers.length) return
+export const aspectRatio: Rule[] = [
+  [
+    /^aspect-ratio-(\d+):(\d+)$/,
+    ([, w, h], { rawSelector, currentSelector, variantHandlers, theme }) => {
+      if (variantHandlers.length) return
 
-    return `
+      return `
 .${e(rawSelector)} {
   display: grid;
 }
@@ -20,5 +21,6 @@ export const aspectRatio: Rule = [
   grid-area: 1 / 1 / 1 / 1;
 }
     `
-  }
+    }
+  ]
 ]

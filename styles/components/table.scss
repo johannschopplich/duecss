@@ -18,7 +18,7 @@
     border-bottom-color: var(--color-text);
   }
 
-  &.is-borderless {
+  &.table-borderless {
     th,
     td,
     thead th,
@@ -27,7 +27,7 @@
     }
   }
 
-  &.is-striped {
+  &.table-striped {
     tbody tr:nth-of-type(odd) {
       background-color: var(--color-contrast-lowest);
     }

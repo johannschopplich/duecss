@@ -1,12 +1,13 @@
 import { escapeSelector as e } from 'unocss'
 import type { Rule } from 'unocss'
 
-export const stretchedLink: Rule = [
-  /^stretched-link$/,
-  ([], { rawSelector, currentSelector, variantHandlers, theme }) => {
-    if (variantHandlers.length) return
+export const stretchedLink: Rule[] = [
+  [
+    /^stretched-link$/,
+    ([], { rawSelector, currentSelector, variantHandlers, theme }) => {
+      if (variantHandlers.length) return
 
-    return `
+      return `
 .${e(rawSelector)}::after {
   content: ${JSON.stringify('')};
   position: absolute;
@@ -17,5 +18,6 @@ export const stretchedLink: Rule = [
   z-index: 1;
 }
 `
-  }
+    }
+  ]
 ]

@@ -1,7 +1,8 @@
 import { theme } from './theme'
 import { rules } from './rules'
 import { shortcuts } from './shortcuts'
-import type { Preset } from 'unocss'
+import type { Theme } from './theme'
+import type { Preset, ConfigBase } from 'unocss'
 
 /**
  * DueCSS Preset
@@ -19,11 +20,12 @@ import type { Preset } from 'unocss'
  * })
  * ```
  */
-export const presetDue = (): Preset => ({
+export const presetDue = (userConfig: ConfigBase<Theme> = {}): Preset => ({
   name: 'unocss-preset-due',
   theme,
   rules,
-  shortcuts
+  shortcuts,
+  ...userConfig
 })
 
 export default presetDue

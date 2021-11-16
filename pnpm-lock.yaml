@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@antfu/utils': ^0.3.0
   '@unocss/reset': ^0.9.3
   bumpp: ^7.1.1
   prettier: ^2.4.1
@@ -9,6 +10,7 @@ specifiers:
   unocss: ^0.9.3
 
 dependencies:
+  '@antfu/utils': 0.3.0
   '@unocss/reset': 0.9.3
   unocss: 0.9.3
 
@@ -19,6 +21,12 @@ devDependencies:
   typescript: 4.4.4
 
 packages:
+
+  /@antfu/utils/0.3.0:
+    resolution: {integrity: sha512-UU8TLr/EoXdg7OjMp0h9oDoIAVr+Z/oW9cpOxQQyrsz6Qzd2ms/1CdWx8fl2OQdFpxGmq5Vc4TwfLHId6nAZjA==}
+    dependencies:
+      '@types/throttle-debounce': 2.1.0
+    dev: false
 
   /@iconify/types/1.0.10:
     resolution: {integrity: sha512-SN3z6einVeUckDQiE8p4POF7X4hk4/y2+a7a4ogJOCxX5XT6z1zXNN8dwS5O1vloXpc6mkHizRZm2qPnhK6NnQ==}
@@ -68,6 +76,10 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.0
+    dev: false
+
+  /@types/throttle-debounce/2.1.0:
+    resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}
     dev: false
 
   /@unocss/cli/0.9.3:

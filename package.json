@@ -45,7 +45,6 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
-    "@unocss/reset": "^0.9.4",
     "unocss": "^0.9.4"
   },
   "devDependencies": {

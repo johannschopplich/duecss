@@ -1,7 +1,6 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@unocss/reset': ^0.9.4
   bumpp: ^7.1.1
   prettier: ^2.4.1
   sass: ^1.43.4
@@ -10,7 +9,6 @@ specifiers:
   unocss: ^0.9.4
 
 dependencies:
-  '@unocss/reset': 0.9.4
   unocss: 0.9.4
 
 devDependencies:

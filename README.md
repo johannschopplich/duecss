@@ -16,6 +16,13 @@ Sometimes, you may want to use all the power of an on-demand utility engine like
 - 🍱 CSS-first – reuse your custom properties everywhere
 - 🏵 Works well for [traditional setups like Kirby](https://github.com/johannschopplich/kirby-vite-unocss-kit)
 
+## Built with DueCSS
+
+Projects demonstrating the capabilities of DueCSS:
+
+- [zahnarzt-schopplich.de](https://github.com/johannschopplich/zahnarzt-schopplich.de) (a variation of Vitesse)
+- [johannschopplich.com](https://github.com/johannschopplich/johannschopplich.com) (Kirby)
+
 ## Installation
 
 ```bash

@@ -1,4 +1,3 @@
-import { escapeSelector as e } from 'unocss'
 import type { Rule } from 'unocss'
 
 export const hyphenated: Rule[] = [

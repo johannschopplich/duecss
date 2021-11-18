@@ -20,6 +20,7 @@ Sometimes, you may want to use all the power of an on-demand utility engine like
 
 Projects demonstrating the capabilities of DueCSS:
 
+- 
 - [zahnarzt-schopplich.de](https://github.com/johannschopplich/zahnarzt-schopplich.de) (a variation of Vitesse)
 - [johannschopplich.com](https://github.com/johannschopplich/johannschopplich.com) (Kirby)
 
@@ -78,23 +79,21 @@ npm i duecss -D
 
 2. Include the DueCSS base.
 
-    Either with Sass:
+    If you're using Sass, you can import DueCSS right into your main stylesheet (given a Vite context to resolve the import):
 
     ```scss
     @use "duecss/base/all";
+    // or for plain CSS stylesheets:
+    // @import "duecss/base";
     ```
 
-    Or with CSS (given a Vite context):
-
-    ```css
-    @import "duecss/base";
-    ```
-
-    Or import the CSS in your `main.ts`:
+    You could also import DueCSS before your main CSS entrypoint in your main script:
 
     ```js
-    // Or `duecss/base.css`
-    import "duecss/base/all.scss";
+    // Or `duecss/base/all.scss` when using Sass
+    import "duecss/base.css";
+    import "./main.css";
+    import "uno.css";
     ```
 
 3. For further customization like, overwrite the main global CSS custom properties:

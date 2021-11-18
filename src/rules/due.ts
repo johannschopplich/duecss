@@ -10,7 +10,7 @@ export const due: Rule[] = [
       if (variantHandlers.length) return
 
       const { color } = parseColor(body, theme) ?? {}
-      if (color) return
+      if (!color) return
 
       return {
         [`--color-${body}`]: color

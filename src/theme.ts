@@ -43,28 +43,28 @@ export const theme: Theme = {
       '900': '#451C1E'
     },
     link: {
-      DEFAULT: 'var(--color-link)',
-      hover: 'var(--color-link-hover)'
+      DEFAULT: 'var(--du-color-link)',
+      hover: 'var(--du-color-link-hover)'
     },
     theme: {
-      text: 'var(--color-text)',
-      background: 'var(--color-background)'
+      text: 'var(--du-color-text)',
+      background: 'var(--du-color-background)'
     },
     contrast: {
-      lowest: 'var(--color-contrast-lowest)',
-      lower: 'var(--color-contrast-lower)',
-      low: 'var(--color-contrast-low)',
-      medium: 'var(--color-contrast-medium)',
-      high: 'var(--color-contrast-high)',
-      higher: 'var(--color-contrast-higher)'
+      lowest: 'var(--du-color-contrast-lowest)',
+      lower: 'var(--du-color-contrast-lower)',
+      low: 'var(--du-color-contrast-low)',
+      medium: 'var(--du-color-contrast-medium)',
+      high: 'var(--du-color-contrast-high)',
+      higher: 'var(--du-color-contrast-higher)'
     }
   },
   fontFamily: {
-    normal: 'var(--font-family-normal)',
-    heading: 'var(--font-family-heading)'
+    normal: 'var(--du-font-family-normal)',
+    heading: 'var(--du-font-family-heading)'
   },
   lineHeight: {
-    normal: 'var(--line-height-normal)',
-    heading: 'var(--line-height-heading)'
+    normal: 'var(--du-line-height-normal)',
+    heading: 'var(--du-line-height-heading)'
   }
 }

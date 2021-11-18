@@ -6,7 +6,7 @@
   //
 
   > *:not(:last-child) {
-    margin-bottom: calc(var(--space-m) * var(--block-vspace-multiplier, 1));
+    margin-bottom: calc(var(--du-space-m) * var(--du-block-vspace-multiplier, 1));
   }
 
   h1,
@@ -14,13 +14,13 @@
   h3,
   h4 {
     &:not(:first-child) {
-      margin-top: calc(var(--space-xl) * var(--block-vspace-multiplier, 1));
+      margin-top: calc(var(--du-space-xl) * var(--du-block-vspace-multiplier, 1));
     }
   }
 
   hr {
     width: 100%;
-    margin: calc(var(--space-m) * var(--block-vspace-multiplier, 1)) auto;
+    margin: calc(var(--du-space-m) * var(--du-block-vspace-multiplier, 1)) auto;
   }
 
   //
@@ -31,14 +31,14 @@
   h2,
   h3,
   h4 {
-    line-height: var(--line-height-heading);
+    line-height: var(--du-line-height-heading);
   }
 
-  h1 { font-size: var(--text-2); }
-  h2 { font-size: var(--text-3); }
-  h3 { font-size: var(--text-4); }
-  h4 { font-size: var(--text-5); }
-  h5, h6 { font-size: var(--text-6); }
+  h1 { font-size: var(--du-text-2); }
+  h2 { font-size: var(--du-text-3); }
+  h3 { font-size: var(--du-text-4); }
+  h4 { font-size: var(--du-text-5); }
+  h5, h6 { font-size: var(--du-text-6); }
 
   h1,
   h2,
@@ -54,7 +54,7 @@
   //
 
   li + li {
-    margin-top: calc(var(--space-xxxs) * var(--block-vspace-multiplier, 1));
+    margin-top: calc(var(--du-space-2xs) * var(--du-block-vspace-multiplier, 1));
   }
 
   //
@@ -74,7 +74,7 @@
 
     ul {
       list-style-type: circle;
-      margin-top: calc(var(--space-xs) * var(--block-vspace-multiplier, 1));
+      margin-top: calc(var(--du-space-xs) * var(--du-block-vspace-multiplier, 1));
     }
   }
 
@@ -83,9 +83,9 @@
   }
 
   blockquote {
-    background-color: var(--color-contrast-lowest);
-    border-left: 5px solid var(--color-contrast-lower);
-    padding: var(--space-s) 2em var(--space-s) calc(2em - 5px);
+    background-color: var(--du-color-contrast-lowest);
+    border-left: 5px solid var(--du-color-contrast-lower);
+    padding: var(--du-space-s) 2em var(--du-space-s) calc(2em - 5px);
   }
 
   figure {
@@ -98,8 +98,8 @@
     }
 
     figcaption {
-      margin-top: calc(var(--space-xs) * var(--block-vspace-multiplier, 1));
-      line-height: var(--line-height-heading);
+      margin-top: calc(var(--du-space-xs) * var(--du-block-vspace-multiplier, 1));
+      line-height: var(--du-line-height-heading);
     }
   }
 }

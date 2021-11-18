@@ -3,35 +3,31 @@
 //
 
 :root {
-  // --color-primary:           #365DC9;
-  // --color-accent:            #C9787C;
+  --du-font-family-normal:      system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --du-font-family-heading:     var(--du-font-family-normal);
+  --du-line-height-normal:      calc(1ex / 0.32);
+  --du-line-height-heading:     calc(1ex / 0.42);
 
-  --font-family-normal:      system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-family-heading:     var(--font-family-normal);
-  --line-height-normal:      calc(1ex / 0.32);
-  --line-height-heading:     calc(1ex / 0.42);
+  --du-text-scale-ratio:        1.2;
+  --du-text-7:                  calc(var(--du-text-6) / var(--du-text-scale-ratio));
+  --du-text-6:                  1rem;
+  --du-text-5:                  calc(var(--du-text-6) * var(--du-text-scale-ratio));
+  --du-text-4:                  calc(var(--du-text-5) * var(--du-text-scale-ratio));
+  --du-text-3:                  calc(var(--du-text-4) * var(--du-text-scale-ratio));
+  --du-text-2:                  calc(var(--du-text-3) * var(--du-text-scale-ratio));
+  --du-text-1:                  calc(var(--du-text-2) * var(--du-text-scale-ratio));
 
-  --text-scale-ratio:        1.2;
-  --text-7:                  calc(var(--text-6) / var(--text-scale-ratio));
-  --text-6:                  1rem;
-  --text-5:                  calc(var(--text-6) * var(--text-scale-ratio));
-  --text-4:                  calc(var(--text-5) * var(--text-scale-ratio));
-  --text-3:                  calc(var(--text-4) * var(--text-scale-ratio));
-  --text-2:                  calc(var(--text-3) * var(--text-scale-ratio));
-  --text-1:                  calc(var(--text-2) * var(--text-scale-ratio));
+  --du-space-2xs:               0.25rem;
+  --du-space-xs:                0.5rem;
+  --du-space-s:                 0.75rem;
+  --du-space-m:                 1.25rem;
+  --du-space-l:                 2rem;
+  --du-space-xl:                3.25rem;
+  --du-space-2xl:               5.25rem;
+  --du-space-3xl:               8.5rem;
 
-  --space-xxxs:              0.25rem;
-  --space-xxs:               0.375rem;
-  --space-xs:                0.5rem;
-  --space-s:                 0.75rem;
-  --space-m:                 1.25rem;
-  --space-l:                 2rem;
-  --space-xl:                3.25rem;
-  --space-xxl:               5.25rem;
-  --space-xxxl:              8.5rem;
-
-  --due-spacer:              var(--space-m);
-  --due-radius:              0.25rem;
+  --du-spacer:                  var(--du-space-m);
+  --du-radius:                  0.25rem;
 }
 
 //
@@ -41,34 +37,34 @@
 :root:not([data-theme]),
 [data-theme="light"] {
   // Shades
-  --color-contrast-lowest:   hsl(0, 0%, 95%);
-  --color-contrast-lower:    hsl(0, 0%, 82%);
-  --color-contrast-low:      hsl(0, 0%, 70%);
-  --color-contrast-medium:   hsl(0, 0%, 48%);
-  --color-contrast-high:     hsl(0, 0%, 20%);
-  --color-contrast-higher:   hsl(0, 0%, 12%);
+  --du-color-contrast-lowest:   hsl(0, 0%, 95%);
+  --du-color-contrast-lower:    hsl(0, 0%, 82%);
+  --du-color-contrast-low:      hsl(0, 0%, 70%);
+  --du-color-contrast-medium:   hsl(0, 0%, 48%);
+  --du-color-contrast-high:     hsl(0, 0%, 20%);
+  --du-color-contrast-higher:   hsl(0, 0%, 12%);
 
   // Semantic color definitions
-  --color-background:        white;
-  --color-text:              var(--color-contrast-higher);
-  --color-border:            var(--color-contrast-lower);
-  --color-link:              var(--color-primary);
-  --color-link-hover:        var(--color-text);
+  --du-color-background:        white;
+  --du-color-text:              var(--du-color-contrast-higher);
+  --du-color-border:            var(--du-color-contrast-lower);
+  --du-color-link:              var(--du-color-primary);
+  --du-color-link-hover:        var(--du-color-text);
 }
 
 [data-theme="dark"] {
   // Shades
-  --color-contrast-lowest:   hsl(0, 0%, 14%);
-  --color-contrast-lower:    hsl(0, 0%, 22%);
-  --color-contrast-low:      hsl(0, 0%, 48%);
-  --color-contrast-medium:   hsl(0, 0%, 70%);
-  --color-contrast-high:     hsl(0, 0%, 82%);
-  --color-contrast-higher:   hsl(0, 0%, 95%);
+  --du-color-contrast-lowest:   hsl(0, 0%, 14%);
+  --du-color-contrast-lower:    hsl(0, 0%, 22%);
+  --du-color-contrast-low:      hsl(0, 0%, 48%);
+  --du-color-contrast-medium:   hsl(0, 0%, 70%);
+  --du-color-contrast-high:     hsl(0, 0%, 82%);
+  --du-color-contrast-higher:   hsl(0, 0%, 95%);
 
   // Semantic color definitions
-  --color-background:        hsl(0, 0%, 10%);
-  --color-text:              white;
-  --color-border:            var(--color-contrast-low);
-  --color-link:              var(--color-primary);
-  --color-link-hover:        var(--color-text);
+  --du-color-background:        hsl(0, 0%, 10%);
+  --du-color-text:              white;
+  --du-color-border:            var(--du-color-contrast-low);
+  --du-color-link:              var(--du-color-primary);
+  --du-color-link-hover:        var(--du-color-text);
 }

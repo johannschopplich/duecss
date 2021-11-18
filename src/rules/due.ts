@@ -2,8 +2,8 @@ import { parseColor } from '../utils'
 import type { Rule } from 'unocss'
 
 export const due: Rule[] = [
-  ['due-w-container', { width: 'calc(100% - 2 * var(--due-spacer))' }],
-  ['due-rounded', { 'border-radius': 'var(--due-radius)' }],
+  ['due-w-container', { width: 'calc(100% - 2 * var(--du-spacer))' }],
+  ['due-rounded', { 'border-radius': 'var(--du-radius)' }],
   [
     /^due-var-color-(.+)$/,
     ([, body], { rawSelector, currentSelector, variantHandlers, theme }) => {
@@ -13,7 +13,7 @@ export const due: Rule[] = [
       if (!color) return
 
       return {
-        [`--color-${body}`]: color
+        [`--du-color-${body}`]: color
       }
     }
   ]

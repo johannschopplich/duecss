@@ -2,8 +2,8 @@ import type { Rule } from 'unocss'
 
 export const hyphenated: Rule[] = [
   [
-    /^hyphenated$/,
-    ([], { rawSelector, currentSelector, variantHandlers, theme }) => ({
+    'hyphenated',
+    {
       'overflow-wrap': 'break-word',
 
       '-webkit-hyphens': 'auto',
@@ -19,6 +19,6 @@ export const hyphenated: Rule[] = [
       'hyphenate-limit-lines': '2',
       'hyphenate-limit-last': 'always',
       'hyphenate-limit-zone': '8%'
-    })
+    }
   ]
 ]

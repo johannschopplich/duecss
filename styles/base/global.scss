@@ -9,7 +9,7 @@ html {
   // maximum of 18px (at a 1280px viewport)
   @include functions.fluid-scale(16px, 18px);
   min-width: 320px;
-  background-color: var(--color-background, white);
+  background-color: var(--du-color-background, white);
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -22,9 +22,9 @@ body {
   block-size: -webkit-fill-available;
   block-size: -moz-available;
   block-size: stretch;
-  font-family: var(--font-family-normal);
-  line-height: var(--line-height-normal);
-  color: var(--color-text);
+  font-family: var(--du-font-family-normal);
+  line-height: var(--du-line-height-normal);
+  color: var(--du-color-text);
 }
 
 //
@@ -36,8 +36,8 @@ body {
 }
 
 hr {
-  border-top-color: var(--color-border);
-  margin: var(--due-spacer) auto;
+  border-top-color: var(--du-color-border);
+  margin: var(--du-due-spacer) auto;
 }
 
 //
@@ -46,7 +46,7 @@ hr {
 
 a {
   cursor: pointer;
-  color: var(--color-link);
+  color: var(--du-color-link);
   text-decoration-line: none;
   text-decoration-style: solid;
   text-decoration-color: currentcolor;
@@ -54,7 +54,7 @@ a {
   text-decoration-skip-ink: auto;
 
   &:hover {
-    color: var(--color-link-hover);
+    color: var(--du-color-link-hover);
   }
 }
 
@@ -68,16 +68,16 @@ mark {
 }
 
 code {
-  background-color: var(--color-contrast-lowest);
-  color: var(--color-contrast-higher);
+  background-color: var(--du-color-contrast-lowest);
+  color: var(--du-color-contrast-higher);
   font-size: 0.875em;
-  padding: var(--space-xxxs) var(--space-xs);
+  padding: var(--du-space-2xs) var(--du-space-xs);
 }
 
 pre {
-  background-color: var(--color-contrast-lowest);
+  background-color: var(--du-color-contrast-lowest);
   font-size: 0.875em;
-  padding: var(--space-s) 1rem;
+  padding: var(--du-space-s) 1rem;
   overflow-x: auto;
   white-space: pre;
   word-wrap: normal;

@@ -2,8 +2,11 @@ import type { Theme } from './theme'
 import type { RuleContext } from 'unocss'
 
 export function parseBracket(str: string) {
-  if (str && str[0] === '[' && str[str.length - 1] === ']')
+  if (str && str[0] === '[' && str[str.length - 1] === ']') {
     return str.slice(1, -1).replace(/_/g, ' ')
+  } else {
+    return null
+  }
 }
 
 export const parseColor = (body: string, theme: Theme) => {

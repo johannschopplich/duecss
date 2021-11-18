@@ -20,7 +20,7 @@ Sometimes, you may want to use all the power of an on-demand utility engine like
 
 Projects demonstrating the capabilities of DueCSS:
 
-- 
+- [animere docs](https://github.com/johannschopplich/animere/blob/main/index.html) (plain Vite project)
 - [zahnarzt-schopplich.de](https://github.com/johannschopplich/zahnarzt-schopplich.de) (a variation of Vitesse)
 - [johannschopplich.com](https://github.com/johannschopplich/johannschopplich.com) (Kirby)
 

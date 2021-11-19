@@ -45,7 +45,7 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
-    "unocss": "^0.10.0"
+    "unocss": "^0.11.1"
   },
   "devDependencies": {
     "bumpp": "^7.1.1",

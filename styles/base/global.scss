@@ -27,17 +27,8 @@ body {
   color: var(--du-color-text);
 }
 
-//
-// Grouping content
-//
-
 [id] {
   scroll-margin-top: 2ex;
-}
-
-hr {
-  border-top-color: var(--du-color-border);
-  margin: var(--du-due-spacer) auto;
 }
 
 //

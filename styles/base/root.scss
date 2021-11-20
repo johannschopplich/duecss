@@ -47,7 +47,6 @@
   // Semantic color definitions
   --du-color-background:        white;
   --du-color-text:              var(--du-color-contrast-higher);
-  --du-color-border:            var(--du-color-contrast-lower);
   --du-color-link:              var(--du-color-primary);
   --du-color-link-hover:        var(--du-color-text);
 }
@@ -64,7 +63,6 @@
   // Semantic color definitions
   --du-color-background:        hsl(0, 0%, 10%);
   --du-color-text:              white;
-  --du-color-border:            var(--du-color-contrast-low);
   --du-color-link:              var(--du-color-primary);
   --du-color-link-hover:        var(--du-color-text);
 }

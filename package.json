@@ -44,14 +44,12 @@
     "build": "tsup && pnpm run css",
     "release": "bumpp package.json --commit --push --tag"
   },
-  "dependencies": {
-    "unocss": "^0.11.1"
-  },
   "devDependencies": {
     "bumpp": "^7.1.1",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
-    "tsup": "^5.7.2",
-    "typescript": "^4.5.2"
+    "tsup": "^5.7.4",
+    "typescript": "^4.5.2",
+    "unocss": "^0.11.4"
   }
 }

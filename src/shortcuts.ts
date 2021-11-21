@@ -16,12 +16,12 @@ const spacingMap: Record<string, string> = {
 
 export const shortcuts: UserShortcuts = [
   [
-    /^container(?:-(fluid))?$/,
+    /^due-container(?:-(fluid))?$/,
     ([, m]) =>
       `relative mx-${m ? '[var(--du-spacer)]' : 'auto due-w-container'}`
   ],
   [
-    /^container-(sm|md|lg|xl|2xl)(?:-(full|fluid))?$/,
+    /^due-container-(sm|md|lg|xl|2xl)(?:-(full|fluid))?$/,
     ([, bp, m]) =>
       `relative mx-${m === 'fluid' ? '[var(--du-spacer)]' : 'auto'} ${
         m === 'full' ? 'w-full' : m !== 'fluid' ? 'due-w-container' : ''

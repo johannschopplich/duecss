@@ -15,6 +15,7 @@ const spacingMap: Record<string, string> = {
 }
 
 export const shortcuts: UserShortcuts = [
+  [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   [
     /^due-container(?:-(fluid))?$/,
     ([, m]) =>
@@ -27,19 +28,18 @@ export const shortcuts: UserShortcuts = [
         m === 'full' ? 'w-full' : m !== 'fluid' ? 'due-w-container' : ''
       } max-w-screen-${bp}`
   ],
-  [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   [/^due-([pm][xyrltbse]?)-(.+)$/, ([, d, v]) => `${d}-${spacingMap[v]}`],
   {
-    title: 'text-contrast-higher font-heading font-600 leading-heading',
     columns: 'flex flex-wrap',
     column: 'block flex-1',
     'column-narrow': 'block flex-grow-0 flex-shrink-0 flex-basis-auto w-auto',
     'column-auto': 'block flex-1 w-auto',
     'column-full': 'block flex-none w-full',
-    'button-text': `${buttonBase} bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline`,
-    'button-primary': `${buttonBase} bg-primary border-transparent text-white outline-color-primary hover:text-white hover:bg-primary-600 focus:bg-primary-600`,
-    'button-primary-outlined': `${buttonBase} bg-transparent border-primary text-primary outline-color-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white`,
-    'button-accent': `${buttonBase} bg-accent border-transparent text-white outline-color-accent hover:text-white hover:bg-accent-600 focus:bg-accent-600`,
-    'button-accent-outlined': `${buttonBase} bg-transparent border-accent text-accent outline-color-accent hover:bg-accent hover:text-white focus:bg-accent focus:text-white`
+    'due-title': 'text-contrast-higher font-heading font-600 leading-heading',
+    'due-button-text': `${buttonBase} bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline`,
+    'due-button-primary': `${buttonBase} bg-primary border-transparent text-white outline-color-primary hover:text-white hover:bg-primary-600 focus:bg-primary-600`,
+    'due-button-primary-outlined': `${buttonBase} bg-transparent border-primary text-primary outline-color-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white`,
+    'due-button-accent': `${buttonBase} bg-accent border-transparent text-white outline-color-accent hover:text-white hover:bg-accent-600 focus:bg-accent-600`,
+    'due-button-accent-outlined': `${buttonBase} bg-transparent border-accent text-accent outline-color-accent hover:bg-accent hover:text-white focus:bg-accent focus:text-white`
   }
 ]

@@ -15,20 +15,26 @@ const spacingMap: Record<string, string> = {
 }
 
 export const shortcuts: UserShortcuts = [
-  [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   [
     /^due-container(?:-(fluid))?$/,
-    ([, m]) =>
-      `relative mx-${m ? '[var(--du-spacer)]' : 'auto due-w-container'}`
+    ([, fluid]) =>
+      `relative ${fluid ? 'mx-[var(--du-spacer)]' : 'mx-auto due-w-contained'}`
   ],
   [
     /^due-container-(sm|md|lg|xl|2xl)(?:-(full|fluid))?$/,
-    ([, bp, m]) =>
-      `relative mx-${m === 'fluid' ? '[var(--du-spacer)]' : 'auto'} ${
-        m === 'full' ? 'w-full' : m !== 'fluid' ? 'due-w-container' : ''
-      } max-w-screen-${bp}`
+    ([, bp, m]) => {
+      let result = `relative max-w-screen-${bp}`
+
+      if (m === 'fluid') result += ' mx-[var(--du-spacer)]'
+      else result += ' mx-auto due-w-contained'
+
+      if (m === 'full') result += ' w-full'
+
+      return result
+    }
   ],
   [/^due-([pm][xyrltbse]?)-(.+)$/, ([, d, v]) => `${d}-${spacingMap[v]}`],
+  [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {
     columns: 'flex flex-wrap',
     column: 'block flex-1',

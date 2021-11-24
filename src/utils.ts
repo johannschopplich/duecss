@@ -1,4 +1,4 @@
-import type { Theme } from './theme'
+import type { Theme } from '@unocss/preset-uno'
 import type { RuleContext } from 'unocss'
 
 export function parseBracket(str: string) {

@@ -23,11 +23,13 @@
   "exports": {
     ".": {
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./theme": {
       "require": "./dist/theme.js",
-      "import": "./dist/theme.mjs"
+      "import": "./dist/theme.mjs",
+      "types": "./dist/theme.d.ts"
     },
     "./*": "./styles/*"
   },

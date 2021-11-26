@@ -42,7 +42,7 @@ export const shortcuts: UserShortcuts = [
     'column-auto': 'block flex-1 w-auto',
     'column-full': 'block flex-none w-full',
     'due-title': 'text-contrast-higher font-heading font-600 leading-heading',
-    'due-control': `due-rounded appearance-none block w-full leading-none border-contrast-lower focus:border-primary px-3 py-2`,
+    'due-control': `due-rounded appearance-none block w-full leading-none border-contrast-lower focus:border-primary focus-visible:outline-none px-3 py-2`,
     'due-button-text': `${buttonBase} bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline`,
     'due-button-primary': `${buttonBase} bg-primary border-transparent text-white outline-color-primary hover:text-white hover:bg-primary-600 focus:bg-primary-600`,
     'due-button-primary-outlined': `${buttonBase} bg-transparent border-primary text-primary outline-color-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white`,

@@ -1,5 +1,5 @@
+import type { RuleContext } from '@unocss/core'
 import type { Theme } from '@unocss/preset-uno'
-import type { RuleContext } from 'unocss'
 
 export function parseBracket(str: string) {
   if (str && str[0] === '[' && str[str.length - 1] === ']') {

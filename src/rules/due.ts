@@ -1,5 +1,5 @@
 import { parseColor } from '../utils'
-import type { Rule } from 'unocss'
+import type { Rule } from '@unocss/core'
 
 export const due: Rule[] = [
   [/^due?-rounded$/, () => ({ 'border-radius': 'var(--du-radius)' })],

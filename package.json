@@ -22,18 +22,13 @@
   },
   "exports": {
     ".": {
-      "require": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
-    "./theme": {
-      "require": "./dist/theme.js",
-      "import": "./dist/theme.mjs",
-      "types": "./dist/theme.d.ts"
-    },
     "./*": "./styles/*"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
@@ -41,18 +36,20 @@
     "styles"
   ],
   "scripts": {
-    "dev": "tsup --watch src",
     "css": "sass styles/base/all.scss styles/base.css --style=expanded --no-source-map",
-    "build": "tsup && pnpm run css",
+    "build": "unbuild && pnpm run css",
+    "stub": "unbuild --stub",
     "release": "bumpp package.json --commit --push --tag"
   },
+  "dependencies": {
+    "@unocss/core": "^0.14.3",
+    "@unocss/preset-uno": "^0.14.3"
+  },
   "devDependencies": {
-    "@unocss/preset-uno": "^0.12.15",
     "bumpp": "^7.1.1",
     "prettier": "^2.5.0",
     "sass": "^1.44.0",
-    "tsup": "^5.10.0",
     "typescript": "^4.5.2",
-    "unocss": "^0.12.15"
+    "unbuild": "^0.5.13"
   }
 }

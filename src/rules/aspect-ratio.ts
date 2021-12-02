@@ -1,5 +1,5 @@
-import { escapeSelector as e } from 'unocss'
-import type { Rule } from 'unocss'
+import { escapeSelector as e } from '@unocss/core'
+import type { Rule } from '@unocss/core'
 
 export const aspectRatio: Rule[] = [
   [

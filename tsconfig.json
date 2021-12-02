@@ -11,5 +11,5 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": ["src", "tsup.config.ts"]
+  "include": ["src", "build.config.ts"]
 }

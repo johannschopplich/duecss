@@ -16,12 +16,16 @@ const spacingMap: Record<string, string> = {
 
 export const shortcuts: UserShortcuts = [
   [
-    /^due-container(?:-(fluid))?$/,
+    /^due?-container(?:-(fluid))?$/,
     ([, fluid]) =>
-      `relative ${fluid ? 'mx-[var(--du-spacer)]' : 'mx-auto w-[calc(100%-2*var(--du-spacer))]'}`
+      `relative ${
+        fluid
+          ? 'mx-[var(--du-spacer)]'
+          : 'mx-auto w-[calc(100%-2*var(--du-spacer))]'
+      }`
   ],
   [
-    /^due-container-(sm|md|lg|xl|2xl)(?:-(full|fluid))?$/,
+    /^due?-container-(sm|md|lg|xl|2xl)(?:-(full|fluid))?$/,
     ([, bp, m]) => {
       let result = `relative max-w-screen-${bp}`
 
@@ -33,20 +37,34 @@ export const shortcuts: UserShortcuts = [
       return result
     }
   ],
-  [/^due-([pm][xyrltbse]?)-(.+)$/, ([, d, v]) => `${d}-${spacingMap[v]}`],
+  [/^due?-([pm][xyrltbse]?)-(.+)$/, ([, d, v]) => `${d}-${spacingMap[v]}`],
+  [
+    /^due?-title$/,
+    () => 'text-contrast-higher font-heading font-600 leading-heading'
+  ],
+  [
+    /^due?-control$/,
+    () =>
+      `due-rounded appearance-none block w-full leading-none border-contrast-lower px-3 py-2 focus:border-primary focus-visible:outline-none`
+  ],
+  [
+    /^due?-button-text$/,
+    () =>
+      `${buttonBase} bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline`
+  ],
+  [
+    /^due?-button-(.+?)(?:-?(outlined))?$/,
+    ([, color, outlined]) =>
+      outlined
+        ? `${buttonBase} bg-transparent border-${color} text-${color} outline-color-${color} hover:bg-${color} hover:text-white focus:bg-${color} focus:text-white`
+        : `${buttonBase} bg-${color} border-transparent text-white outline-color-${color} hover:bg-${color}-600 hover:text-white focus:bg-${color}-600`
+  ],
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {
     columns: 'flex flex-wrap',
     column: 'block flex-1',
     'column-narrow': 'block flex-[0,0,auto] w-auto',
     'column-auto': 'block flex-1 w-auto',
-    'column-full': 'block flex-none w-full',
-    'due-title': 'text-contrast-higher font-heading font-600 leading-heading',
-    'due-control': `due-rounded appearance-none block w-full leading-none border-contrast-lower focus:border-primary focus-visible:outline-none px-3 py-2`,
-    'due-button-text': `${buttonBase} bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline`,
-    'due-button-primary': `${buttonBase} bg-primary border-transparent text-white outline-color-primary hover:text-white hover:bg-primary-600 focus:bg-primary-600`,
-    'due-button-primary-outlined': `${buttonBase} bg-transparent border-primary text-primary outline-color-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white`,
-    'due-button-accent': `${buttonBase} bg-accent border-transparent text-white outline-color-accent hover:text-white hover:bg-accent-600 focus:bg-accent-600`,
-    'due-button-accent-outlined': `${buttonBase} bg-transparent border-accent text-accent outline-color-accent hover:bg-accent hover:text-white focus:bg-accent focus:text-white`
+    'column-full': 'block flex-none w-full'
   }
 ]

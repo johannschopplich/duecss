@@ -1,4 +1,5 @@
 import { aspectRatio } from './aspect-ratio'
+import { content } from './content'
 import { due } from './due'
 import { hyphenated } from './hyphenated'
 import { outlineColor } from './outline-color'
@@ -9,6 +10,7 @@ import type { Rule } from 'unocss'
 
 export const rules: Rule[] = [
   aspectRatio,
+  content,
   due,
   hyphenated,
   outlineColor,

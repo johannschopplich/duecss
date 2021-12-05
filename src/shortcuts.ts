@@ -37,7 +37,7 @@ export const shortcuts: UserShortcuts = [
       return result
     }
   ],
-  [/^due?-([pm][xyrltbse]?)-(.+)$/, ([, d, v]) => `${d}-${spacingMap[v]}`],
+  [/^due-text-(\w+)$/, ([, w]) => `text-[var(--du-text-${w})]`],
   [
     /^due?-title$/,
     () => 'text-contrast-higher font-heading font-600 leading-heading'
@@ -59,6 +59,8 @@ export const shortcuts: UserShortcuts = [
         ? `${buttonBase} bg-transparent border-${color} text-${color} outline-color-${color} hover:bg-${color} hover:text-white focus:bg-${color} focus:text-white`
         : `${buttonBase} bg-${color} border-transparent text-white outline-color-${color} hover:bg-${color}-600 hover:text-white focus:bg-${color}-600`
   ],
+  [/^due?-([pm][xyrltbse]?)-(.+)$/, ([, d, v]) => `${d}-${spacingMap[v]}`],
+
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {
     columns: 'flex flex-wrap',

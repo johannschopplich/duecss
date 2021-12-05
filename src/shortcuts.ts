@@ -37,7 +37,6 @@ export const shortcuts: UserShortcuts = [
       return result
     }
   ],
-  [/^due-text-(\w+)$/, ([, w]) => `text-[var(--du-text-${w})]`],
   [
     /^due?-title$/,
     () => 'text-contrast-higher font-heading font-600 leading-heading'

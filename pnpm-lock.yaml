@@ -1,23 +1,23 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@unocss/core': ^0.15.5
-  '@unocss/preset-uno': ^0.15.5
+  '@unocss/core': ^0.16.0
+  '@unocss/preset-uno': ^0.16.0
   bumpp: ^7.1.1
   prettier: ^2.5.1
   sass: ^1.44.0
-  typescript: ^4.5.2
+  typescript: ^4.5.3
   unbuild: ^0.6.3
 
 dependencies:
-  '@unocss/core': 0.15.5
-  '@unocss/preset-uno': 0.15.5
+  '@unocss/core': 0.16.0
+  '@unocss/preset-uno': 0.16.0
 
 devDependencies:
   bumpp: 7.1.1
   prettier: 2.5.1
   sass: 1.44.0
-  typescript: 4.5.2
+  typescript: 4.5.3
   unbuild: 0.6.3
 
 packages:
@@ -176,29 +176,29 @@ packages:
       '@types/node': 16.11.11
     dev: true
 
-  /@unocss/core/0.15.5:
-    resolution: {integrity: sha512-zMoCtzR4TWyumzziEJVQHDCCOw/YntYFpnSgveoKrXszv4x8dmMDvytN9VjCGSoEwOVO89r6IstYSXbYfoybJA==}
+  /@unocss/core/0.16.0:
+    resolution: {integrity: sha512-DBqi1TpmBz9qTy77C3QOUZVd/cIb+XoGh1P/EwQK0ls/OF5SiB+DZy3rWl5lznA7vMjxaq6Z+D24SlOueBhBUA==}
     dev: false
 
-  /@unocss/preset-mini/0.15.5:
-    resolution: {integrity: sha512-BBoK834fAAmFd3cJULi+MSA9095Ip1HYODPV1pIT2I6CWGJcxDZcAthpWO041cSd8WjvKhekYv8hr4VpLyHUUg==}
+  /@unocss/preset-mini/0.16.0:
+    resolution: {integrity: sha512-yTixjUKMXYpQfCedQLAtX/Qfi74YASNbyGHvvcjmMXNTZ24fL3vrEXX0dIyrzBBd6ljtDthRbkFOHlh7b/HSxw==}
     dependencies:
-      '@unocss/core': 0.15.5
+      '@unocss/core': 0.16.0
     dev: false
 
-  /@unocss/preset-uno/0.15.5:
-    resolution: {integrity: sha512-09OXw5SjQMVTZ+GxUp8EzJXIC/icC8Kelwi2sfLBU7s4w96a3tZKYqCxaw4W73DirXv7IiP8G7HmClyZditafw==}
+  /@unocss/preset-uno/0.16.0:
+    resolution: {integrity: sha512-Ol8edssPMz9+fhXIKL8EOUEg5dke4AKFCCiqV8JGs996/VrIJoKOe/3b8JeloUtap5mGCjrBfSGATZqP0qso0w==}
     dependencies:
-      '@unocss/core': 0.15.5
-      '@unocss/preset-mini': 0.15.5
-      '@unocss/preset-wind': 0.15.5
+      '@unocss/core': 0.16.0
+      '@unocss/preset-mini': 0.16.0
+      '@unocss/preset-wind': 0.16.0
     dev: false
 
-  /@unocss/preset-wind/0.15.5:
-    resolution: {integrity: sha512-MO5mUd6yRQqrEkpJ0ccfWn2xUvYK5xsPv/DljTul/EKYDtL5jgh+ESZA0lsmEA2nnSftVOuP8BE029JcpG1GDQ==}
+  /@unocss/preset-wind/0.16.0:
+    resolution: {integrity: sha512-zr24qFSRKfFiK8p57oejqzmpHyCssnmneOU+vSFkyvflOvPIdieI2Q1GO3Nl7Par8uYjpJt+CR+fMHRg+mTlgA==}
     dependencies:
-      '@unocss/core': 0.15.5
-      '@unocss/preset-mini': 0.15.5
+      '@unocss/core': 0.16.0
+      '@unocss/preset-mini': 0.16.0
     dev: false
 
   /ansi-styles/3.2.1:
@@ -971,7 +971,7 @@ packages:
     hasBin: true
     dev: true
 
-  /mkdist/0.3.5_typescript@4.5.2:
+  /mkdist/0.3.5_typescript@4.5.3:
     resolution: {integrity: sha512-3ai1qPfTufa/YMdsjYoA372YVogn1yLkHTG7H7tG66xJpYdoK3vnelROhM41dGhHh/4RhObCkDwAQCpIx81A3g==}
     hasBin: true
     peerDependencies:
@@ -987,7 +987,7 @@ packages:
       jiti: 1.12.9
       mri: 1.2.0
       pathe: 0.2.0
-      typescript: 4.5.2
+      typescript: 4.5.3
     dev: true
 
   /mlly/0.3.15:
@@ -1095,7 +1095,7 @@ packages:
       glob: 7.2.0
     dev: true
 
-  /rollup-plugin-dts/4.0.1_rollup@2.60.2+typescript@4.5.2:
+  /rollup-plugin-dts/4.0.1_rollup@2.60.2+typescript@4.5.3:
     resolution: {integrity: sha512-DNv5F8pro/r0Hkx3JWKRtJZocDnqXfgypoajeiaNq134rYaFcEIl/oas5PogD1qexMadVijsHyVko1Chig0OOQ==}
     engines: {node: '>=v12.22.6'}
     peerDependencies:
@@ -1104,7 +1104,7 @@ packages:
     dependencies:
       magic-string: 0.25.7
       rollup: 2.60.2
-      typescript: 4.5.2
+      typescript: 4.5.3
     optionalDependencies:
       '@babel/code-frame': 7.16.0
     dev: true
@@ -1215,8 +1215,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /typescript/4.5.2:
-    resolution: {integrity: sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==}
+  /typescript/4.5.3:
+    resolution: {integrity: sha512-eVYaEHALSt+s9LbvgEv4Ef+Tdq7hBiIZgii12xXJnukryt3pMgJf6aKhoCZ3FWQsu6sydEnkg11fYXLzhLBjeQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
@@ -1244,7 +1244,7 @@ packages:
       jiti: 1.12.9
       magic-string: 0.25.7
       mkdirp: 1.0.4
-      mkdist: 0.3.5_typescript@4.5.2
+      mkdist: 0.3.5_typescript@4.5.3
       mlly: 0.3.15
       mri: 1.2.0
       pathe: 0.2.0
@@ -1252,10 +1252,10 @@ packages:
       pretty-bytes: 5.6.0
       rimraf: 3.0.2
       rollup: 2.60.2
-      rollup-plugin-dts: 4.0.1_rollup@2.60.2+typescript@4.5.2
+      rollup-plugin-dts: 4.0.1_rollup@2.60.2+typescript@4.5.3
       rollup-plugin-esbuild: 4.7.2_esbuild@0.14.1+rollup@2.60.2
       scule: 0.2.1
-      typescript: 4.5.2
+      typescript: 4.5.3
       untyped: 0.3.0
     dev: true
 

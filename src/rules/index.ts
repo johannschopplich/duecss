@@ -1,4 +1,3 @@
-import { aspectRatio } from './aspect-ratio'
 import { content } from './content'
 import { due } from './due'
 import { hyphenated } from './hyphenated'
@@ -9,7 +8,6 @@ import { unselectable } from './unselectable'
 import type { Rule } from '@unocss/core'
 
 export const rules: Rule[] = [
-  aspectRatio,
   content,
   due,
   hyphenated,

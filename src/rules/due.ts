@@ -5,7 +5,7 @@ import type { Rule } from '@unocss/core'
 export const due: Rule[] = [
   [/^due?-rounded$/, () => ({ 'border-radius': 'var(--du-radius)' })],
   [
-    /^due?-text-(?:size-)(\w+)$/,
+    /^due?-text-(?:size-)?(\w+)$/,
     ([, w]) => ({ 'font-size': `var(--du-text-${w})` })
   ],
   [

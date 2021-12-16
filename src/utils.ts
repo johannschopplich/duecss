@@ -10,19 +10,33 @@ export function parseBracket(str: string) {
 }
 
 export const parseColor = (body: string, theme: Theme) => {
-  const [name, no = 'DEFAULT'] = body
-    .replace(/([a-z])([0-9])/g, '$1-$2')
-    .split(/-/g)
+  const colors = body.replace(/([a-z])([0-9])/g, '$1-$2').split(/-/g)
+  const [name] = colors
 
   if (!name) return
 
   let color: string | undefined
-  const bracket = parseBracket(body) || body
-  if (bracket.startsWith('#')) color = bracket.slice(1)
-  if (bracket.startsWith('hex-')) color = bracket.slice(4)
+  const bracketOrBody = parseBracket(body) || body
+
+  if (bracketOrBody.startsWith('#')) color = bracketOrBody.slice(1)
+  if (bracketOrBody.startsWith('hex-')) color = bracketOrBody.slice(4)
+
+  color = color || bracketOrBody
+
+  let no = 'DEFAULT'
 
   if (!color) {
-    const colorData = theme.colors?.[name]
+    let colorData = theme.colors?.[name]
+    if (colorData) {
+      ;[, no = no] = colors
+    } else {
+      if (colors.slice(-1)[0].match(/^\d+$/)) no = colors.pop() as string
+      colorData =
+        theme.colors?.[
+          colors.join('-').replace(/(-[a-z])/g, (n) => n.slice(1).toUpperCase())
+        ]
+    }
+
     if (typeof colorData === 'string') color = colorData
     else if (no && colorData) color = colorData[no]
   }

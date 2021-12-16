@@ -3,9 +3,15 @@ import type { Theme } from '@unocss/preset-uno'
 
 export function parseBracket(str: string) {
   if (str && str[0] === '[' && str[str.length - 1] === ']') {
-    return str.slice(1, -1).replace(/_/g, ' ')
-  } else {
-    return null
+    return str
+      .slice(1, -1)
+      .replace(/_/g, ' ')
+      .replace(/calc\((.*)/g, (v) => {
+        return v.replace(
+          /(-?\d*\.?\d(?!\b-.+[,)](?![^+\-/*])\D)(?:%|[a-z]+)?|\))([+\-/*])/g,
+          '$1 $2 '
+        )
+      })
   }
 }
 
@@ -16,12 +22,13 @@ export const parseColor = (body: string, theme: Theme) => {
   if (!name) return
 
   let color: string | undefined
-  const bracketOrBody = parseBracket(body) || body
+  const bracket = parseBracket(body)
+  const bracketOrBody = bracket || body
 
   if (bracketOrBody.startsWith('#')) color = bracketOrBody.slice(1)
   if (bracketOrBody.startsWith('hex-')) color = bracketOrBody.slice(4)
 
-  color = color || bracketOrBody
+  color = color || bracket
 
   let no = 'DEFAULT'
 

@@ -40,14 +40,14 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
-    "@unocss/core": "^0.16.0",
-    "@unocss/preset-uno": "^0.16.0"
+    "@unocss/core": "^0.16.4",
+    "@unocss/preset-uno": "^0.16.4"
   },
   "devDependencies": {
     "bumpp": "^7.1.1",
     "prettier": "^2.5.1",
-    "sass": "^1.44.0",
-    "typescript": "^4.5.3",
-    "unbuild": "^0.6.3"
+    "sass": "^1.45.0",
+    "typescript": "^4.5.4",
+    "unbuild": "^0.6.7"
   }
 }

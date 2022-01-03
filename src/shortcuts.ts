@@ -64,7 +64,7 @@ export const shortcuts: UserShortcuts = [
   {
     columns: 'flex flex-wrap',
     column: 'block flex-1',
-    'column-narrow': 'block flex-[0,0,auto] w-auto',
+    'column-narrow': 'block flex-[0_0_auto] w-auto',
     'column-auto': 'block flex-1 w-auto',
     'column-full': 'block flex-none w-full'
   }

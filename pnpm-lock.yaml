@@ -1,22 +1,22 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@unocss/core': ^0.20.2
-  '@unocss/preset-uno': ^0.20.2
+  '@unocss/core': ^0.22.1
+  '@unocss/preset-uno': ^0.22.1
   bumpp: ^7.1.1
   prettier: ^2.5.1
-  sass: ^1.45.2
+  sass: ^1.48.0
   typescript: ^4.5.4
   unbuild: ^0.6.7
 
 dependencies:
-  '@unocss/core': 0.20.2
-  '@unocss/preset-uno': 0.20.2
+  '@unocss/core': 0.22.1
+  '@unocss/preset-uno': 0.22.1
 
 devDependencies:
   bumpp: 7.1.1
   prettier: 2.5.1
-  sass: 1.45.2
+  sass: 1.48.0
   typescript: 4.5.4
   unbuild: 0.6.7
 
@@ -176,29 +176,29 @@ packages:
       '@types/node': 17.0.0
     dev: true
 
-  /@unocss/core/0.20.2:
-    resolution: {integrity: sha512-75aFwJS2fPoAVLnUXYhj4Rug8MqPYSyKDTw8qWBUIiuMd2dSLOd/GuWVejiZyd/MwwZL71EeNQnF3Wu8nft0ZQ==}
+  /@unocss/core/0.22.1:
+    resolution: {integrity: sha512-sOr4LJJ4RVMBquZy29M7SXBICeM7cXHSsgZJCjzYCS/egzuVGWiuO65kDfzXV5/mGZT5ZyQs/vD3sQ2YqBAPXA==}
     dev: false
 
-  /@unocss/preset-mini/0.20.2:
-    resolution: {integrity: sha512-HebyJ/RmSoouDQ4u0w4Vm+QEmfHHaIFnZM/mye5c6RGzgzw7VdV6Kq3Fl0N1Xi/5PnHNRc04WaJt7KXPD5l35w==}
+  /@unocss/preset-mini/0.22.1:
+    resolution: {integrity: sha512-vuqUx7AxQoDh9APY53hI/7IqibHoVX7iCn+LNaX8c6aSqN/JJ58ICQNUkkLGFyUz3yGxUwQq3IX7fI17uB3ouQ==}
     dependencies:
-      '@unocss/core': 0.20.2
+      '@unocss/core': 0.22.1
     dev: false
 
-  /@unocss/preset-uno/0.20.2:
-    resolution: {integrity: sha512-elIxP1LNg2i/OhBgXEWmTnMvjtK2x6cDfq9m7FW6CeBeVVnUqOt73CpMWyrUPuRRIpZiuYTYEL4w3oo/HBvRJw==}
+  /@unocss/preset-uno/0.22.1:
+    resolution: {integrity: sha512-OWF7WbzabpPJ9eemwOiORmhKfIKF1UWkRfqzg29Juz+4gxBXQQuVv9UulwR6dfwAXMbM3JEIUoagZfefn7iNfQ==}
     dependencies:
-      '@unocss/core': 0.20.2
-      '@unocss/preset-mini': 0.20.2
-      '@unocss/preset-wind': 0.20.2
+      '@unocss/core': 0.22.1
+      '@unocss/preset-mini': 0.22.1
+      '@unocss/preset-wind': 0.22.1
     dev: false
 
-  /@unocss/preset-wind/0.20.2:
-    resolution: {integrity: sha512-rh6RqyYs03wn33/2LrgUDQlUE6DtCQqJsiBUOs3HyU/FABVjD/gpD4tsQFbvrAIceMrlAuA6w05CQ0hZQ/6iNw==}
+  /@unocss/preset-wind/0.22.1:
+    resolution: {integrity: sha512-IywmkxqIaYRcqkPXBoX649eyIkKabT/3dxuLmBm34jiTI0LaI/aCB60CWyeuRdw/wDK7vesUlAHg6dQUP8MJVg==}
     dependencies:
-      '@unocss/core': 0.20.2
-      '@unocss/preset-mini': 0.20.2
+      '@unocss/core': 0.22.1
+      '@unocss/preset-mini': 0.22.1
     dev: false
 
   /ansi-styles/3.2.1:
@@ -1137,8 +1137,8 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /sass/1.45.2:
-    resolution: {integrity: sha512-cKfs+F9AMPAFlbbTXNsbGvg3y58nV0mXA3E94jqaySKcC8Kq3/8983zVKQ0TLMUrHw7hF9Tnd3Bz9z5Xgtrl9g==}
+  /sass/1.48.0:
+    resolution: {integrity: sha512-hQi5g4DcfjcipotoHZ80l7GNJHGqQS5LwMBjVYB/TaT0vcSSpbgM8Ad7cgfsB2M0MinbkEQQPO9+sjjSiwxqmw==}
     engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:

@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -8,9 +7,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noImplicitReturns": true,
     "skipLibCheck": true
-  },
-  "include": ["src", "build.config.ts"]
+  }
 }

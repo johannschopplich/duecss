@@ -40,8 +40,8 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
-    "@unocss/core": "^0.22.1",
-    "@unocss/preset-uno": "^0.22.1"
+    "@unocss/core": "^0.22.4",
+    "@unocss/preset-uno": "^0.22.4"
   },
   "devDependencies": {
     "bumpp": "^7.1.1",

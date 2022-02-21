@@ -52,11 +52,6 @@ a {
 // Text-level semantics
 //
 
-mark {
-  background-color: hsl(46, 100%, 85%);
-  color: inherit;
-}
-
 code {
   background-color: var(--du-color-contrast-lowest);
   color: var(--du-color-contrast-higher);
@@ -102,7 +97,7 @@ input,
 select,
 textarea {
   background-color: transparent;
-  border: 1px solid WindowFrame;
+  border: 1px solid currentColor;
   color: inherit;
   font: inherit;
   padding: 0.25em 0.375em;

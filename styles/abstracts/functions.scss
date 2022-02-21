@@ -1,5 +1,5 @@
-@use "sass:math";
-@use "sass:string";
+@use 'sass:math';
+@use 'sass:string';
 
 // Linearly scale CSS properties with units based on the viewport
 // @see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
@@ -18,7 +18,7 @@
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     $slope: math.div($max - $min, $maxvw - $minvw);
     $yAxisIntersection: -$minvw * $slope + $min;
-    $preferredValue: $yAxisIntersection + " + " + $slope * 100 + "vw";
+    $preferredValue: $yAxisIntersection + ' + ' + $slope * 100 + 'vw';
 
     & {
       #{$property}: #{$min};

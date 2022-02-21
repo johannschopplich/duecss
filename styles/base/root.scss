@@ -3,31 +3,32 @@
 //
 
 :root {
-  --du-font-family-normal:      system-ui, -apple-system, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --du-font-family-heading:     var(--du-font-family-normal);
-  --du-line-height-normal:      calc(1ex / 0.32);
-  --du-line-height-heading:     calc(1ex / 0.42);
+  --du-font-family-normal: system-ui, -apple-system, 'Segoe UI', Roboto,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --du-font-family-heading: var(--du-font-family-normal);
+  --du-line-height-normal: calc(1ex / 0.32);
+  --du-line-height-heading: calc(1ex / 0.42);
 
-  --du-text-scale-ratio:        1.2;
-  --du-text-7:                  calc(var(--du-text-6) / var(--du-text-scale-ratio));
-  --du-text-6:                  1rem;
-  --du-text-5:                  calc(var(--du-text-6) * var(--du-text-scale-ratio));
-  --du-text-4:                  calc(var(--du-text-5) * var(--du-text-scale-ratio));
-  --du-text-3:                  calc(var(--du-text-4) * var(--du-text-scale-ratio));
-  --du-text-2:                  calc(var(--du-text-3) * var(--du-text-scale-ratio));
-  --du-text-1:                  calc(var(--du-text-2) * var(--du-text-scale-ratio));
+  --du-text-scale-ratio: 1.2;
+  --du-text-7: calc(var(--du-text-6) / var(--du-text-scale-ratio));
+  --du-text-6: 1rem;
+  --du-text-5: calc(var(--du-text-6) * var(--du-text-scale-ratio));
+  --du-text-4: calc(var(--du-text-5) * var(--du-text-scale-ratio));
+  --du-text-3: calc(var(--du-text-4) * var(--du-text-scale-ratio));
+  --du-text-2: calc(var(--du-text-3) * var(--du-text-scale-ratio));
+  --du-text-1: calc(var(--du-text-2) * var(--du-text-scale-ratio));
 
-  --du-space-2xs:               0.25rem;
-  --du-space-xs:                0.5rem;
-  --du-space-s:                 0.75rem;
-  --du-space-m:                 1.25rem;
-  --du-space-l:                 2rem;
-  --du-space-xl:                3.25rem;
-  --du-space-2xl:               5.25rem;
-  --du-space-3xl:               8.5rem;
+  --du-space-2xs: 0.25rem;
+  --du-space-xs: 0.5rem;
+  --du-space-s: 0.75rem;
+  --du-space-m: 1.25rem;
+  --du-space-l: 2rem;
+  --du-space-xl: 3.25rem;
+  --du-space-2xl: 5.25rem;
+  --du-space-3xl: 8.5rem;
 
-  --du-spacer:                  var(--du-space-m);
-  --du-radius:                  0.25rem;
+  --du-spacer: var(--du-space-m);
+  --du-radius: 0.25rem;
 }
 
 //
@@ -35,34 +36,34 @@
 //
 
 :root:not([data-theme]),
-[data-theme="light"] {
+[data-theme='light'] {
   // Shades
-  --du-color-contrast-lowest:   hsl(0, 0%, 95%);
-  --du-color-contrast-lower:    hsl(0, 0%, 82%);
-  --du-color-contrast-low:      hsl(0, 0%, 70%);
-  --du-color-contrast-medium:   hsl(0, 0%, 48%);
-  --du-color-contrast-high:     hsl(0, 0%, 20%);
-  --du-color-contrast-higher:   hsl(0, 0%, 12%);
+  --du-color-contrast-lowest: hsl(0, 0%, 95%);
+  --du-color-contrast-lower: hsl(0, 0%, 82%);
+  --du-color-contrast-low: hsl(0, 0%, 70%);
+  --du-color-contrast-medium: hsl(0, 0%, 48%);
+  --du-color-contrast-high: hsl(0, 0%, 20%);
+  --du-color-contrast-higher: hsl(0, 0%, 12%);
 
   // Semantic color definitions
-  --du-color-background:        white;
-  --du-color-text:              var(--du-color-contrast-higher);
-  --du-color-link:              var(--du-color-primary);
-  --du-color-link-hover:        var(--du-color-text);
+  --du-color-background: white;
+  --du-color-text: var(--du-color-contrast-higher);
+  --du-color-link: var(--du-color-primary);
+  --du-color-link-hover: var(--du-color-text);
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   // Shades
-  --du-color-contrast-lowest:   hsl(0, 0%, 14%);
-  --du-color-contrast-lower:    hsl(0, 0%, 22%);
-  --du-color-contrast-low:      hsl(0, 0%, 48%);
-  --du-color-contrast-medium:   hsl(0, 0%, 70%);
-  --du-color-contrast-high:     hsl(0, 0%, 82%);
-  --du-color-contrast-higher:   hsl(0, 0%, 95%);
+  --du-color-contrast-lowest: hsl(0, 0%, 14%);
+  --du-color-contrast-lower: hsl(0, 0%, 22%);
+  --du-color-contrast-low: hsl(0, 0%, 48%);
+  --du-color-contrast-medium: hsl(0, 0%, 70%);
+  --du-color-contrast-high: hsl(0, 0%, 82%);
+  --du-color-contrast-higher: hsl(0, 0%, 95%);
 
   // Semantic color definitions
-  --du-color-background:        hsl(0, 0%, 10%);
-  --du-color-text:              white;
-  --du-color-link:              var(--du-color-primary);
-  --du-color-link-hover:        var(--du-color-text);
+  --du-color-background: hsl(0, 0%, 10%);
+  --du-color-text: white;
+  --du-color-link: var(--du-color-primary);
+  --du-color-link-hover: var(--du-color-text);
 }

@@ -27,7 +27,7 @@ export const shortcuts: UserShortcuts<Theme> = [
   ],
   [
     /^due?-title$/,
-    () => 'text-contrast-higher font-heading font-600 leading-heading'
+    () => 'text-contrast-higher font-heading font-600 leading-tight'
   ],
   [
     /^due?-control$/,

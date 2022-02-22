@@ -1,21 +1,24 @@
 import type { UserShortcuts } from '@unocss/core'
+import type { Theme } from '@unocss/preset-uno'
 
 const buttonBase =
   'appearance-none unselectable inline-flex items-center justify-center border leading-none px-3 py-2 rounded disabled:opacity-50'
 
-export const shortcuts: UserShortcuts = [
+export const shortcuts: UserShortcuts<Theme> = [
   [
     /^due?-container(?:-(fluid))?$/,
-    ([, fluid]) =>
-      `relative ${fluid ? 'mx-lg' : 'mx-auto w-[calc(100%-2.25rem)]'}`
+    ([, fluid], { theme }) =>
+      `relative ${
+        fluid ? 'mx-lg' : `mx-auto w-[calc(100%-2*${theme?.spacing?.lg})]`
+      }`
   ],
   [
     /^due?-container-(sm|md|lg|xl|2xl)(?:-(full|fluid))?$/,
-    ([, bp, m]) => {
+    ([, bp, m], { theme }) => {
       let result = `relative max-w-screen-${bp}`
 
       if (m === 'fluid') result += ' mx-lg'
-      else result += ' mx-auto w-[calc(100%-2.25rem)]'
+      else result += ` mx-auto w-[calc(100%-2*${theme?.spacing?.lg})]`
 
       if (m === 'full') result += ' w-full'
 

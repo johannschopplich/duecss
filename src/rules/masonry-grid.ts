@@ -13,7 +13,7 @@ export const hyphenated: Rule<Theme>[] = [
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(var(--du-masonry-max-w, 25rem), 100%), 1fr)
+    minmax(min(var(--masonry-col-max-w, 25rem), 100%), 1fr)
   );
   grid-template-rows: masonry;
   justify-content: center;

@@ -2,7 +2,7 @@ import { escapeSelector as e } from '@unocss/core'
 import type { Rule } from '@unocss/core'
 import type { Theme } from '@unocss/preset-uno'
 
-export const hyphenated: Rule<Theme>[] = [
+export const masonryGrid: Rule<Theme>[] = [
   [
     /^masonry-grid$/,
     ([], { rawSelector, currentSelector, variantHandlers, theme }) => {
@@ -20,11 +20,6 @@ export const hyphenated: Rule<Theme>[] = [
 
 .${e(rawSelector)} > * {
   align-self: start;
-}
-
-.${e(rawSelector)} img {
-  object-fit: cover;
-  max-height: inherit;
 }
 `
     }

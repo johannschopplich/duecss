@@ -45,12 +45,25 @@ export const theme: Theme = {
       higher: 'var(--du-color-contrast-higher)'
     }
   },
+  borderRadius: {
+    base: '0.125rem'
+  },
+  fontSize: {
+    xs: ['0.75rem', 'var(--du-line-height-base)'],
+    sm: ['0.875rem', 'var(--du-line-height-base)'],
+    base: ['1rem', 'var(--du-line-height-base)'],
+    lg: ['var(--du-text-lg)', 'var(--du-line-height-base)'],
+    xl: ['var(--du-text-xl)', 'var(--du-line-height-heading)'],
+    '2xl': ['var(--du-text-2xl)', 'var(--du-line-height-heading)'],
+    '3xl': ['var(--du-text-3xl)', 'var(--du-line-height-heading)'],
+    '4xl': ['var(--du-text-4xl)', 'var(--du-line-height-heading)']
+  },
   fontFamily: {
-    normal: 'var(--du-font-family-normal)',
+    base: 'var(--du-font-family-base)',
     heading: 'var(--du-font-family-heading)'
   },
   lineHeight: {
-    normal: 'var(--du-line-height-normal)',
+    base: 'var(--du-line-height-base)',
     heading: 'var(--du-line-height-heading)'
   }
 }

@@ -26,6 +26,11 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
+    "./client": {
+      "require": "./dist/client.cjs",
+      "import": "./dist/client.mjs",
+      "types": "./dist/client.d.ts"
+    },
     "./*": "./styles/*"
   },
   "types": "./dist/index.d.ts",
@@ -35,7 +40,7 @@
   ],
   "scripts": {
     "css": "sass styles/base/all.scss styles/base.css --style=expanded --no-source-map",
-    "build": "unbuild && pnpm run css",
+    "build": "pnpm run css && unbuild",
     "stub": "unbuild --stub",
     "release": "bumpp package.json --commit --push --tag"
   },

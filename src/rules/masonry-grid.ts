@@ -17,6 +17,7 @@ export const masonryGrid: Rule<Theme>[] = [
   );
   grid-template-rows: masonry;
   justify-content: center;
+}
 
 .${e(rawSelector)} > * {
   align-self: start;

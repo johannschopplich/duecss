@@ -6,15 +6,16 @@ const buttonBase =
 export const shortcuts: UserShortcuts = [
   [
     /^due?-container(?:-(fluid))?$/,
-    ([, fluid]) => `relative ${fluid ? 'mx-4' : 'mx-auto w-[calc(100%-1rem]'}`
+    ([, fluid]) =>
+      `relative ${fluid ? 'mx-lg' : 'mx-auto w-[calc(100%-1.125rem)]'}`
   ],
   [
     /^due?-container-(sm|md|lg|xl|2xl)(?:-(full|fluid))?$/,
     ([, bp, m]) => {
       let result = `relative max-w-screen-${bp}`
 
-      if (m === 'fluid') result += ' mx-4'
-      else result += ' mx-auto w-[calc(100%-1rem]'
+      if (m === 'fluid') result += ' mx-lg'
+      else result += ' mx-auto w-[calc(100%-1.125rem)]'
 
       if (m === 'full') result += ' w-full'
 

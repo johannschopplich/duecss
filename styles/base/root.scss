@@ -3,32 +3,18 @@
 //
 
 :root {
-  --du-font-family-normal: system-ui, -apple-system, 'Segoe UI', Roboto,
+  --du-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-  --du-font-family-heading: var(--du-font-family-normal);
-  --du-line-height-normal: calc(1ex / 0.32);
+  --du-font-family-heading: var(--du-font-family-base);
+  --du-line-height-base: calc(1ex / 0.32);
   --du-line-height-heading: calc(1ex / 0.42);
 
   --du-text-scale-ratio: 1.2;
-  --du-text-7: calc(var(--du-text-6) / var(--du-text-scale-ratio));
-  --du-text-6: 1rem;
-  --du-text-5: calc(var(--du-text-6) * var(--du-text-scale-ratio));
-  --du-text-4: calc(var(--du-text-5) * var(--du-text-scale-ratio));
-  --du-text-3: calc(var(--du-text-4) * var(--du-text-scale-ratio));
-  --du-text-2: calc(var(--du-text-3) * var(--du-text-scale-ratio));
-  --du-text-1: calc(var(--du-text-2) * var(--du-text-scale-ratio));
-
-  --du-space-2xs: 0.25rem;
-  --du-space-xs: 0.5rem;
-  --du-space-s: 0.75rem;
-  --du-space-m: 1.25rem;
-  --du-space-l: 2rem;
-  --du-space-xl: 3.25rem;
-  --du-space-2xl: 5.25rem;
-  --du-space-3xl: 8.5rem;
-
-  --du-spacer: var(--du-space-m);
-  --du-radius: 0.25rem;
+  --du-text-lg: calc(1rem * var(--du-text-scale-ratio));
+  --du-text-xl: calc(var(--du-text-lg) * var(--du-text-scale-ratio));
+  --du-text-2xl: calc(var(--du-text-xl) * var(--du-text-scale-ratio));
+  --du-text-3xl: calc(var(--du-text-2xl) * var(--du-text-scale-ratio));
+  --du-text-4xl: calc(var(--du-text-3xl) * var(--du-text-scale-ratio));
 }
 
 //

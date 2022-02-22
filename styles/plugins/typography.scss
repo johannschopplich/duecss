@@ -6,9 +6,7 @@
   //
 
   > *:not(:last-child) {
-    margin-bottom: calc(
-      var(--du-space-m) * var(--du-block-space-y-multiplier, 1)
-    );
+    margin-bottom: calc(1rem * var(--du-prose-space-y-multiplier, 1));
   }
 
   h1,
@@ -16,15 +14,13 @@
   h3,
   h4 {
     &:not(:first-child) {
-      margin-top: calc(
-        var(--du-space-xl) * var(--du-block-space-y-multiplier, 1)
-      );
+      margin-top: calc(2.25rem * var(--du-prose-space-y-multiplier, 1));
     }
   }
 
   hr {
     width: 100%;
-    margin: calc(var(--du-space-m) * var(--du-block-space-y-multiplier, 1)) auto;
+    margin: calc(1rem * var(--du-prose-space-y-multiplier, 1)) auto;
   }
 
   //
@@ -34,30 +30,27 @@
   h1,
   h2,
   h3,
-  h4 {
-    line-height: var(--du-line-height-heading);
-  }
-
-  h1 {
-    font-size: var(--du-text-2);
-  }
-  h2 {
-    font-size: var(--du-text-3);
-  }
-  h3 {
-    font-size: var(--du-text-4);
-  }
-  h4 {
-    font-size: var(--du-text-5);
-  }
-
-  h1,
-  h2,
-  h3,
   h4,
   h5,
   h6 {
     font-weight: 600;
+    line-height: var(--du-line-height-heading);
+  }
+
+  h1 {
+    font-size: var(--du-text-3xl);
+  }
+
+  h2 {
+    font-size: var(--du-text-2xl);
+  }
+
+  h3 {
+    font-size: var(--du-text-xl);
+  }
+
+  h4 {
+    font-size: var(--du-text-lg);
   }
 
   //
@@ -65,9 +58,7 @@
   //
 
   li + li {
-    margin-top: calc(
-      var(--du-space-2xs) * var(--du-block-space-y-multiplier, 1)
-    );
+    margin-top: calc(0.25rem * var(--du-prose-space-y-multiplier, 1));
   }
 
   //
@@ -87,9 +78,7 @@
 
     ul {
       list-style-type: circle;
-      margin-top: calc(
-        var(--du-space-xs) * var(--du-block-space-y-multiplier, 1)
-      );
+      margin-top: calc(0.5rem * var(--du-prose-space-y-multiplier, 1));
     }
   }
 
@@ -98,9 +87,9 @@
   }
 
   blockquote {
-    background-color: var(--du-color-contrast-lowest);
-    border-left: 5px solid var(--du-color-contrast-lower);
-    padding: var(--du-space-s) 2em var(--du-space-s) calc(2em - 5px);
+    font-style: italic;
+    border-left: 0.25em solid;
+    padding-left: 1em;
   }
 
   figure {
@@ -108,14 +97,9 @@
     margin-right: 2em;
     margin-left: 2em;
 
-    img {
-      display: inline-block;
-    }
-
     figcaption {
-      margin-top: calc(
-        var(--du-space-xs) * var(--du-block-space-y-multiplier, 1)
-      );
+      font-size: 0.875em;
+      margin-top: calc(0.5rem * var(--du-prose-space-y-multiplier, 1));
       line-height: var(--du-line-height-heading);
     }
   }

@@ -21,8 +21,8 @@ html {
 
 body {
   height: 100%;
-  font-family: var(--du-font-family-normal);
-  line-height: var(--du-line-height-normal);
+  font-family: var(--du-font-family-base);
+  line-height: var(--du-line-height-base);
   color: var(--du-color-text);
 }
 
@@ -56,13 +56,13 @@ code {
   background-color: var(--du-color-contrast-lowest);
   color: var(--du-color-contrast-higher);
   font-size: 0.875em;
-  padding: var(--du-space-2xs) var(--du-space-xs);
+  padding: 0.25rem 0.5rem;
 }
 
 pre {
   background-color: var(--du-color-contrast-lowest);
   font-size: 0.875em;
-  padding: var(--du-space-s) 1rem;
+  padding: 0.75rem 1rem;
   overflow-x: auto;
   white-space: pre;
   word-wrap: normal;
@@ -87,10 +87,6 @@ svg:not([fill]) {
 //
 // Form-associated content
 //
-
-label {
-  display: inline-block;
-}
 
 button,
 input,

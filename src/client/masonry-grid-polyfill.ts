@@ -6,7 +6,7 @@ interface Grid {
   count: number
 }
 
-const arrangeItems = (grid: Grid) => {
+const composeGrid = (grid: Grid) => {
   const columns = getComputedStyle(grid.el).gridTemplateColumns.split(
     ' '
   ).length
@@ -45,8 +45,8 @@ const arrangeItems = (grid: Grid) => {
   }
 }
 
-export const masonryGridPolyfill = () => {
-  const elements = [...document.querySelectorAll<HTMLElement>('.masonry-grid')]
+export const masonryGridPolyfill = (selectors = '.masonry-grid') => {
+  const elements = [...document.querySelectorAll<HTMLElement>(selectors)]
 
   // Bail if no elements where found
   if (!elements.length) return
@@ -54,20 +54,20 @@ export const masonryGridPolyfill = () => {
   // Bail if masonry layouts are already supported by the browser
   if (getComputedStyle(elements[0]).gridTemplateRows === 'masonry') return
 
-  const grids = elements.map((grid) => ({
-    el: grid,
-    gap: parseFloat(getComputedStyle(grid).rowGap),
-    items: ([...grid.childNodes] as HTMLElement[])
-      // Make sure the child nodes are element nodes
-      .filter((i) => i.nodeType === 1),
-    columns: 0,
-    count: 0
-  }))
+  for (const el of elements) {
+    const grid = {
+      el,
+      gap: parseFloat(getComputedStyle(el).rowGap),
+      items: ([...el.childNodes] as HTMLElement[])
+        // Make sure the child nodes are element nodes
+        .filter((i) => i.nodeType === 1),
+      columns: 0,
+      count: 0
+    }
 
-  for (const grid of grids) {
-    arrangeItems(grid)
+    composeGrid(grid)
 
-    const resizeObserver = new ResizeObserver(() => arrangeItems(grid))
+    const resizeObserver = new ResizeObserver(() => composeGrid(grid))
     resizeObserver.observe(grid.el)
   }
 }

@@ -22,14 +22,9 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    },
-    "./client": {
-      "require": "./dist/client.cjs",
-      "import": "./dist/client.mjs",
-      "types": "./dist/client.d.ts"
+      "import": "./dist/index.mjs"
     },
     "./*": "./styles/*"
   },

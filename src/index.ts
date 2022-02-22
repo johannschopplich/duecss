@@ -3,6 +3,8 @@ import { rules } from './rules'
 import { shortcuts } from './shortcuts'
 import type { Preset } from '@unocss/core'
 
+export * from './client'
+
 /**
  * DueCSS Preset
  *

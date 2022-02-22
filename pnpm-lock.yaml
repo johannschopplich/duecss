@@ -1,8 +1,8 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@unocss/core': ^0.26.0
-  '@unocss/preset-uno': ^0.26.0
+  '@unocss/core': ^0.26.2
+  '@unocss/preset-uno': ^0.26.2
   bumpp: ^7.1.1
   prettier: ^2.5.1
   sass: ^1.49.8
@@ -10,8 +10,8 @@ specifiers:
   unbuild: ^0.6.9
 
 dependencies:
-  '@unocss/core': 0.26.0
-  '@unocss/preset-uno': 0.26.0
+  '@unocss/core': 0.26.2
+  '@unocss/preset-uno': 0.26.2
 
 devDependencies:
   bumpp: 7.1.1
@@ -176,29 +176,29 @@ packages:
       '@types/node': 17.0.16
     dev: true
 
-  /@unocss/core/0.26.0:
-    resolution: {integrity: sha512-6SLtt8cVmjqOtx/h35flvrGT/SJ0fBy+IvRSu9wbqsd+mwPzR9UyiBCYpwZwCutHRENxLbRig265/mEPjnhSCA==}
+  /@unocss/core/0.26.2:
+    resolution: {integrity: sha512-r4mNsMV8y5mbRPQj9eX6neGrV0Y7eD4y52rBUPRoTWvijqVcLzbGKgCZ2ASLtgvH+DL4UgFOCrlg8I5NbROnwQ==}
     dev: false
 
-  /@unocss/preset-mini/0.26.0:
-    resolution: {integrity: sha512-IgO0YqA1aGH19h5YMZjspv8RYN1LFKLlqw5VihjYkN/gjSpRpTvB0ZnjDAWpux97L6AEzKjq+6je2vvCHZwdFw==}
+  /@unocss/preset-mini/0.26.2:
+    resolution: {integrity: sha512-GMQ198LA0XlXs+xzuXoZLcdH/6WSJN+h5Z9TTVDmnAeD6v0TTRmgWfO3lVQDgyFTI2Oi5BsVsVth++Bg2lIeLQ==}
     dependencies:
-      '@unocss/core': 0.26.0
+      '@unocss/core': 0.26.2
     dev: false
 
-  /@unocss/preset-uno/0.26.0:
-    resolution: {integrity: sha512-EZMGKVCq2mamh78A4gJ4SYxMoxNs70bfvQOh9aQ39D/VFmHXI2a4HSBvdHJ5Zwkb2mWGBuSNtqHjk/8G9mdXCg==}
+  /@unocss/preset-uno/0.26.2:
+    resolution: {integrity: sha512-iGDrl98UwLIygm+PL5bBqDIWgOil+X5ExFdxlgZRXBy8I7c+5SRB6PFI3M5fxQnZaA6sRYx70XSFGoesOAid2Q==}
     dependencies:
-      '@unocss/core': 0.26.0
-      '@unocss/preset-mini': 0.26.0
-      '@unocss/preset-wind': 0.26.0
+      '@unocss/core': 0.26.2
+      '@unocss/preset-mini': 0.26.2
+      '@unocss/preset-wind': 0.26.2
     dev: false
 
-  /@unocss/preset-wind/0.26.0:
-    resolution: {integrity: sha512-HNM/TGoTUa/GWDT0lTVmQ7odNukLjoYDkG4Ncg5BcI/2inPnDGEoeYKycunlIseOf6rI++FtH8dwxLo9FZxp+A==}
+  /@unocss/preset-wind/0.26.2:
+    resolution: {integrity: sha512-qkC3H9ilFpcPK+kWjnkQPaqiKUp8Lo4W7AITpQdeaylVI9XhbsZlz1rtCCtlBFpNGbr8jMtxq/1RHFbKC20T2w==}
     dependencies:
-      '@unocss/core': 0.26.0
-      '@unocss/preset-mini': 0.26.0
+      '@unocss/core': 0.26.2
+      '@unocss/preset-mini': 0.26.2
     dev: false
 
   /ansi-styles/3.2.1:

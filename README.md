@@ -21,8 +21,8 @@ Sometimes, you may want to use all the power of an on-demand utility engine like
 Projects demonstrating the capabilities of DueCSS:
 
 - [animere docs](https://github.com/johannschopplich/animere/blob/main/index.html) (plain Vite project)
-- [zahnarzt-schopplich.de](https://github.com/johannschopplich/zahnarzt-schopplich.de) (a variation of Vitesse)
-- [johannschopplich.com](https://github.com/johannschopplich/johannschopplich.com) (Kirby)
+- [zahnarzt-schopplich.de](https://github.com/johannschopplich/zahnarzt-schopplich.de) (built with îles)
+- [johannschopplich.com](https://github.com/johannschopplich/johannschopplich.com) (built with Kirby)
 
 ## Installation
 
@@ -100,13 +100,13 @@ npm i duecss -D
 
    ```css
    :root {
-     --du-font-family-base: 'HK Grotesk', system-ui;
+     --du-font-family-normal: 'HK Grotesk', system-ui;
      --du-font-family-heading: 'Petunia Sans', sans-serif;
      --du-text-scale-ratio: 1.333;
    }
    ```
 
-   Now, use `font-base` or `font-heading` in your components.
+   Now, use `font-normal` or `font-heading` in your components.
 
 ## Features
 

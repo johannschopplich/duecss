@@ -1,7 +1,7 @@
 import type { UserShortcuts } from '@unocss/core'
 
 const buttonBase =
-  'appearance-none unselectable inline-flex items-center justify-center border leading-none px-3 py-2 rounded-base disabled:opacity-50'
+  'appearance-none unselectable inline-flex items-center justify-center border leading-none px-3 py-2 rounded disabled:opacity-50'
 
 export const shortcuts: UserShortcuts = [
   [
@@ -28,7 +28,7 @@ export const shortcuts: UserShortcuts = [
   [
     /^due?-control$/,
     () =>
-      `appearance-none block w-full leading-none border-contrast-lower px-3 py-2 rounded-base focus:border-primary focus-visible:outline-none`
+      `appearance-none block w-full leading-none border-contrast-lower px-3 py-2 rounded focus:border-primary focus-visible:outline-none`
   ],
   [
     /^due?-button-text$/,

@@ -46,24 +46,24 @@ export const theme: Theme = {
     }
   },
   borderRadius: {
-    base: '0.125rem'
+    DEFAULT: '0.125rem'
   },
   fontSize: {
-    xs: ['0.75rem', 'var(--du-line-height-base)'],
-    sm: ['0.875rem', 'var(--du-line-height-base)'],
-    base: ['1rem', 'var(--du-line-height-base)'],
-    lg: ['var(--du-text-lg)', 'var(--du-line-height-base)'],
+    xs: ['0.75rem', 'var(--du-line-height-normal)'],
+    sm: ['0.875rem', 'var(--du-line-height-normal)'],
+    base: ['1rem', 'var(--du-line-height-normal)'],
+    lg: ['var(--du-text-lg)', 'var(--du-line-height-heading)'],
     xl: ['var(--du-text-xl)', 'var(--du-line-height-heading)'],
     '2xl': ['var(--du-text-2xl)', 'var(--du-line-height-heading)'],
     '3xl': ['var(--du-text-3xl)', 'var(--du-line-height-heading)'],
     '4xl': ['var(--du-text-4xl)', 'var(--du-line-height-heading)']
   },
   fontFamily: {
-    base: 'var(--du-font-family-base)',
+    normal: 'var(--du-font-family-normal)',
     heading: 'var(--du-font-family-heading)'
   },
   lineHeight: {
-    base: 'var(--du-line-height-base)',
-    heading: 'var(--du-line-height-heading)'
+    tight: 'var(--du-line-height-heading)',
+    normal: 'var(--du-line-height-normal)'
   }
 }

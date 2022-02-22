@@ -89,7 +89,7 @@ npm i duecss -D
 
    You could also import DueCSS before your main CSS entrypoint in your main script:
 
-   ```js
+   ```ts
    // Or `duecss/base/all.scss` when using Sass
    import 'duecss/base.css'
    import './main.css'
@@ -150,6 +150,24 @@ DueCSS will then generate and include the following global CSS custom properties
 ```
 
 Now you can reference to these color variables everywhere in your CSS code.
+
+## Masonry Grid Polyfill
+
+Use masonry layouts in your CSS today!
+
+```html
+<div class="masonry-grid gap-sm">
+  <!-- Grid items -->
+</div>
+```
+
+To enable the polyfill, run it inside your client code. If your browser already supports masonry grids, it will skip initialization gracefully.
+
+```ts
+import { masonryGridPolyfill } from 'duecss'
+
+masonryGridPolyfill()
+```
 
 ## License
 

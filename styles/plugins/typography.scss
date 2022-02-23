@@ -3,7 +3,7 @@
   --du-prose-code: var(--du-color-contrast-higher);
 
   > :where(*:not(:last-child)) {
-    margin-bottom: calc(1rem * var(--du-prose-space-y-multiplier, 1));
+    margin-bottom: calc(1rem * var(--du-prose-y-spacer, 1));
   }
 
   :where(blockquote) {
@@ -17,7 +17,7 @@
     line-height: var(--du-line-height-heading);
 
     &:not(:first-child) {
-      margin-top: calc(2rem * var(--du-prose-space-y-multiplier, 1));
+      margin-top: calc(2rem * var(--du-prose-y-spacer, 1));
     }
   }
 
@@ -45,7 +45,7 @@
 
   :where(figcaption) {
     font-size: 0.875em;
-    margin-top: calc(0.5rem * var(--du-prose-space-y-multiplier, 1));
+    margin-top: 0.5rem;
   }
 
   :where(code) {
@@ -95,12 +95,12 @@
   :where(ol > li::marker),
   :where(ul > li::marker),
   :where(summary::marker) {
-    color: var(--du-prose-lists);
+    color: var(--du-prose-lists, currentColor);
   }
 
   :where(hr) {
-    margin: calc(2rem * var(--du-prose-space-y-multiplier, 1)) auto;
-    border: 1px solid var(--du-prose-hr);
+    margin: calc(2rem * var(--du-prose-y-spacer, 1)) auto;
+    border: 1px solid var(--du-prose-hr, currentColor);
   }
 
   :where(table) {
@@ -114,7 +114,7 @@
   }
 
   :where(td, th) {
-    border: 1px solid var(--du-prose-borders);
+    border: 1px solid var(--du-prose-borders, currentColor);
     padding: 0.625rem 1rem;
   }
 

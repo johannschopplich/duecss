@@ -27,7 +27,7 @@ const composeGrid = (grid: Grid) => {
     grid.columns = columns
 
     // Revert to initial positioning, no margin
-    grid.items.forEach((i) => i.style.removeProperty('margin-top'))
+    for (const { style } of grid.items) style.removeProperty('margin-top')
 
     // If we have more than one column
     if (grid.columns > 1) {
@@ -55,7 +55,7 @@ export const masonryGridPolyfill = (selectors = '.masonry-grid') => {
   if (getComputedStyle(elements[0]).gridTemplateRows === 'masonry') return
 
   for (const el of elements) {
-    const grid = {
+    const grid: Grid = {
       el,
       gap: parseFloat(getComputedStyle(el).rowGap),
       items: ([...el.childNodes] as HTMLElement[])

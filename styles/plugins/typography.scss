@@ -8,7 +8,7 @@
 
   :where(blockquote) {
     font-style: italic;
-    border-left: 0.25rem solid var(--du-prose-borders);
+    border-left: 0.25rem solid var(--du-prose-borders, currentColor);
     padding-left: 1.25rem;
   }
 

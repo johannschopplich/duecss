@@ -1,9 +1,5 @@
 @use '../abstracts/functions';
 
-//
-// Document
-//
-
 html {
   // Scales the `font-size` from a minimum of 16px (at a 320px viewport) to a
   // maximum of 18px (at a 1280px viewport)
@@ -15,24 +11,12 @@ html {
   overflow-y: scroll;
 }
 
-//
-// Sections
-//
-
 body {
   height: 100%;
   font-family: var(--du-font-family-normal);
   line-height: var(--du-line-height-normal);
   color: var(--du-color-text);
 }
-
-[id] {
-  scroll-margin-top: 2ex;
-}
-
-//
-// Links
-//
 
 a {
   cursor: pointer;
@@ -48,64 +32,18 @@ a {
   }
 }
 
-//
-// Text-level semantics
-//
-
-code {
-  background-color: var(--du-color-contrast-lowest);
-  color: var(--du-color-contrast-higher);
-  font-size: 0.875em;
-  padding: 0.25rem 0.5rem;
-}
-
-pre {
-  background-color: var(--du-color-contrast-lowest);
-  font-size: 0.875em;
-  padding: 0.75rem 1rem;
-  overflow-x: auto;
-  white-space: pre;
-  word-wrap: normal;
-
-  code {
-    background-color: transparent;
-    color: currentColor;
-    font-size: 1em;
-    padding: 0;
-  }
-}
-
-//
-// Embedded content
-//
-
 // Change the fill color to match the text color
 svg:not([fill]) {
   fill: currentColor;
-}
-
-//
-// Form-associated content
-//
-
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  border: 1px solid currentColor;
-  color: inherit;
-  font: inherit;
-  padding: 0.25em 0.375em;
 }
 
 button {
   touch-action: manipulation;
 }
 
-//
-// Accessibility
-//
+[id] {
+  scroll-margin-top: 2ex;
+}
 
 // Hide focus styles if they're not needed, for example,
 // when an element receives focus via the mouse

@@ -1,106 +1,142 @@
+// Adapted from https://github.com/unocss/unocss/tree/main/packages/preset-typography
 .prose {
-  overflow-wrap: break-word;
+  --du-prose-code: var(--du-color-contrast-higher);
 
-  //
-  // Vertical block spacing
-  //
-
-  > *:not(:last-child) {
+  > :where(*:not(:last-child)) {
     margin-bottom: calc(1rem * var(--du-prose-space-y-multiplier, 1));
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
+  :where(blockquote) {
+    font-style: italic;
+    border-left: 0.25rem solid var(--du-prose-borders);
+    padding-left: 1.25rem;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) {
+    font-weight: 600;
+    line-height: var(--du-line-height-heading);
+
     &:not(:first-child) {
-      margin-top: calc(2.25rem * var(--du-prose-space-y-multiplier, 1));
+      margin-top: calc(2rem * var(--du-prose-space-y-multiplier, 1));
     }
   }
 
-  hr {
-    width: 100%;
-    margin: calc(1rem * var(--du-prose-space-y-multiplier, 1)) auto;
-  }
-
-  //
-  // Headings
-  //
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 600;
-    line-height: var(--du-line-height-heading);
-  }
-
-  h1 {
+  :where(h1) {
     font-size: var(--du-text-3xl);
   }
 
-  h2 {
+  :where(h2) {
     font-size: var(--du-text-2xl);
   }
 
-  h3 {
+  :where(h3) {
     font-size: var(--du-text-xl);
   }
 
-  h4 {
+  :where(h4) {
     font-size: var(--du-text-lg);
   }
 
-  //
-  // Text-level semantics
-  //
-
-  li + li {
-    margin-top: calc(0.25rem * var(--du-prose-space-y-multiplier, 1));
-  }
-
-  //
-  // Common content elements
-  //
-
-  ul,
-  ol,
-  dd {
-    &:not([class]) {
-      margin-left: 2em;
-    }
-  }
-
-  ul {
-    list-style: disc outside;
-
-    ul {
-      list-style-type: circle;
-      margin-top: calc(0.5rem * var(--du-prose-space-y-multiplier, 1));
-    }
-  }
-
-  ol {
-    list-style: decimal outside;
-  }
-
-  blockquote {
-    font-style: italic;
-    border-left: 0.25em solid;
-    padding-left: 1em;
-  }
-
-  figure {
+  :where(figure) {
     text-align: center;
-    margin-right: 2em;
-    margin-left: 2em;
+    margin-right: 0;
+    margin-left: 0;
+  }
 
-    figcaption {
-      font-size: 0.875em;
-      margin-top: calc(0.5rem * var(--du-prose-space-y-multiplier, 1));
-      line-height: var(--du-line-height-heading);
-    }
+  :where(figcaption) {
+    font-size: 0.875em;
+    margin-top: calc(0.5rem * var(--du-prose-space-y-multiplier, 1));
+  }
+
+  :where(code) {
+    color: var(--du-prose-code);
+    font-size: 0.875em;
+    font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      Liberation-Mono, Courier-New, monospace;
+  }
+
+  :where(:not(pre) > code)::before,
+  :where(:not(pre) > code)::after {
+    content: '`';
+  }
+
+  :where(pre) {
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    border-radius: 0.375rem;
+  }
+
+  :where(pre, code) {
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    background: transparent;
+  }
+
+  :where(pre code) {
+    font-weight: inherit;
+  }
+
+  :where(ol, ul) {
+    padding-left: 1.25rem;
+  }
+
+  :where(ul) {
+    list-style-type: disc;
+  }
+
+  :where(ol > li::marker),
+  :where(ul > li::marker),
+  :where(summary::marker) {
+    color: var(--du-prose-lists);
+  }
+
+  :where(hr) {
+    margin: calc(2rem * var(--du-prose-space-y-multiplier, 1)) auto;
+    border: 1px solid var(--du-prose-hr);
+  }
+
+  :where(table) {
+    display: block;
+    border-collapse: collapse;
+    overflow-x: auto;
+  }
+
+  :where(tr:nth-child(2n)) {
+    background: var(--du-color-contrast-lowest);
+  }
+
+  :where(td, th) {
+    border: 1px solid var(--du-prose-borders);
+    padding: 0.625rem 1rem;
+  }
+
+  :where(abbr) {
+    cursor: help;
+  }
+
+  :where(kbd) {
+    color: var(--du-prose-code);
+    border: 1px solid;
+    font-size: 0.875em;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  :where(details) {
+    padding: 1.25rem 1.5rem;
+    background-color: var(--du-color-contrast-lowest);
+  }
+
+  :where(summary) {
+    cursor: pointer;
+    font-weight: 600;
   }
 }

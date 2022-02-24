@@ -6,21 +6,21 @@ const buttonBase =
 
 export const shortcuts: UserShortcuts<Theme> = [
   [
-    /^due?-title$/,
+    /^(?:du-)?title$/,
     () => 'text-contrast-higher font-heading font-600 leading-tight'
   ],
   [
-    /^due?-control$/,
+    /^(?:du-)?control$/,
     () =>
       `appearance-none block w-full leading-none border-contrast-lower px-3 py-2 rounded focus:border-primary focus-visible:outline-none`
   ],
   [
-    /^due?-button-text$/,
+    /^(?:du-)?button-text$/,
     () =>
       `${buttonBase} bg-transparent border-transparent text-theme-text hover:text-theme-text hover:text-decoration-line-underline focus:text-decoration-line-underline`
   ],
   [
-    /^due?-button-(.+?)(?:-?(outlined))?$/,
+    /^(?:du-)?button-(.+?)(?:-?(outlined))?$/,
     ([, color, outlined]) =>
       outlined
         ? `${buttonBase} bg-transparent border-${color} text-${color} outline-color-${color} hover:bg-${color} hover:text-white focus:bg-${color} focus:text-white`

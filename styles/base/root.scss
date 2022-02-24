@@ -23,13 +23,13 @@
 
 :root:not([data-theme]),
 [data-theme='light'] {
-  // Shades
-  --du-color-contrast-lowest: #f3f4f6; // 100
-  --du-color-contrast-lower: #e5e7eb; // 200
-  --du-color-contrast-low: #d1d5db; // 300
-  --du-color-contrast-medium: #6b7280; // 500
-  --du-color-contrast-high: #1f2937; // 800
-  --du-color-contrast-higher: #111827; // 900
+  // Shades (zinc color from Tailwind CSS)
+  --du-color-contrast-lowest: #f4f4f5; // 100
+  --du-color-contrast-lower: #e4e4e7; // 200
+  --du-color-contrast-low: #d4d4d8; // 300
+  --du-color-contrast-medium: #71717a; // 500
+  --du-color-contrast-high: #27272a; // 800
+  --du-color-contrast-higher: #18181b; // 900
 
   // Semantic color definitions
   --du-color-background: white;
@@ -40,15 +40,15 @@
 
 [data-theme='dark'] {
   // Shades
-  --du-color-contrast-lowest: #1f2937; // 800
-  --du-color-contrast-lower: #374151; // 700
-  --du-color-contrast-low: #4b5563; // 600
-  --du-color-contrast-medium: #9ca3af; // 400
-  --du-color-contrast-high: #f3f4f6; // 100
+  --du-color-contrast-lowest: #27272a; // 800
+  --du-color-contrast-lower: #3f3f46; // 700
+  --du-color-contrast-low: #52525b; // 600
+  --du-color-contrast-medium: #a1a1aa; // 400
+  --du-color-contrast-high: #f4f4f5; // 100
   --du-color-contrast-higher: #f9fafb; // 50
 
   // Semantic color definitions
-  --du-color-background: #111827; // 900
+  --du-color-background: #18181b; // 900
   --du-color-text: white;
   --du-color-link: var(--du-color-primary);
   --du-color-link-hover: var(--du-color-text);

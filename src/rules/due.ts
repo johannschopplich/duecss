@@ -3,7 +3,7 @@ import type { Rule } from '@unocss/core'
 
 export const due: Rule[] = [
   [
-    /^due?-var-color-(.+)$/,
+    /^(?:du-)?var-color-(.+)$/,
     ([, body], { rawSelector, currentSelector, variantHandlers, theme }) => {
       if (variantHandlers.length) return
 

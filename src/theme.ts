@@ -33,7 +33,7 @@ export const theme: Theme = {
       hover: 'var(--du-color-link-hover)'
     },
     theme: {
-      text: 'var(--du-color-text)',
+      base: 'var(--du-color-text)',
       background: 'var(--du-color-background)'
     },
     contrast: {

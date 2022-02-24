@@ -14,7 +14,7 @@
 
   :where(h1, h2, h3, h4, h5, h6) {
     font-weight: 600;
-    line-height: var(--du-line-height-heading);
+    line-height: var(--du-line-height-tight);
 
     &:not(:first-child) {
       margin-top: calc(2rem * var(--du-prose-y-spacer, 1));

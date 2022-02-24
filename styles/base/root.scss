@@ -24,12 +24,12 @@
 :root:not([data-theme]),
 [data-theme='light'] {
   // Shades
-  --du-color-contrast-lowest: hsl(0, 0%, 95%);
-  --du-color-contrast-lower: hsl(0, 0%, 82%);
-  --du-color-contrast-low: hsl(0, 0%, 70%);
-  --du-color-contrast-medium: hsl(0, 0%, 48%);
-  --du-color-contrast-high: hsl(0, 0%, 20%);
-  --du-color-contrast-higher: hsl(0, 0%, 12%);
+  --du-color-contrast-lowest: #f3f4f6; // 100
+  --du-color-contrast-lower: #e5e7eb; // 200
+  --du-color-contrast-low: #d1d5db; // 300
+  --du-color-contrast-medium: #6b7280; // 500
+  --du-color-contrast-high: #1f2937; // 800
+  --du-color-contrast-higher: #111827; // 900
 
   // Semantic color definitions
   --du-color-background: white;
@@ -40,15 +40,15 @@
 
 [data-theme='dark'] {
   // Shades
-  --du-color-contrast-lowest: hsl(0, 0%, 14%);
-  --du-color-contrast-lower: hsl(0, 0%, 22%);
-  --du-color-contrast-low: hsl(0, 0%, 48%);
-  --du-color-contrast-medium: hsl(0, 0%, 70%);
-  --du-color-contrast-high: hsl(0, 0%, 82%);
-  --du-color-contrast-higher: hsl(0, 0%, 95%);
+  --du-color-contrast-lowest: #1f2937; // 800
+  --du-color-contrast-lower: #374151; // 700
+  --du-color-contrast-low: #4b5563; // 600
+  --du-color-contrast-medium: #9ca3af; // 400
+  --du-color-contrast-high: #f3f4f6; // 100
+  --du-color-contrast-higher: #f9fafb; // 50
 
   // Semantic color definitions
-  --du-color-background: hsl(0, 0%, 10%);
+  --du-color-background: #111827; // 900
   --du-color-text: white;
   --du-color-link: var(--du-color-primary);
   --du-color-link-hover: var(--du-color-text);

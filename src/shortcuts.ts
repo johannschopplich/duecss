@@ -6,26 +6,6 @@ const buttonBase =
 
 export const shortcuts: UserShortcuts<Theme> = [
   [
-    /^due?-container(?:-(fluid))?$/,
-    ([, fluid], { theme }) =>
-      `relative ${
-        fluid ? 'mx-lg' : `mx-auto w-[calc(100%-2*${theme?.spacing?.lg})]`
-      }`
-  ],
-  [
-    /^due?-container-(sm|md|lg|xl|2xl)(?:-(full|fluid))?$/,
-    ([, bp, m], { theme }) => {
-      let result = `relative max-w-screen-${bp}`
-
-      if (m === 'fluid') result += ' mx-lg'
-      else result += ` mx-auto w-[calc(100%-2*${theme?.spacing?.lg})]`
-
-      if (m === 'full') result += ' w-full'
-
-      return result
-    }
-  ],
-  [
     /^due?-title$/,
     () => 'text-contrast-higher font-heading font-600 leading-tight'
   ],

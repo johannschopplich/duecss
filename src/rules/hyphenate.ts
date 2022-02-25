@@ -1,8 +1,8 @@
 import type { Rule } from '@unocss/core'
 
-export const hyphenated: Rule[] = [
+export const hyphenate: Rule[] = [
   [
-    'hyphenated',
+    'hyphenate',
     {
       'overflow-wrap': 'break-word',
 

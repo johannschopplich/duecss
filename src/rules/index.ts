@@ -1,14 +1,7 @@
 import { due } from './due'
-import { hyphenated } from './hyphenated'
-import { textDecorationLine } from './text-decoration-line'
+import { hyphenate } from './hyphenate'
 import { masonryGrid } from './masonry-grid'
 import { unselectable } from './unselectable'
 import type { Rule } from '@unocss/core'
 
-export const rules: Rule[] = [
-  due,
-  hyphenated,
-  textDecorationLine,
-  masonryGrid,
-  unselectable
-].flat(1)
+export const rules: Rule[] = [due, hyphenate, masonryGrid, unselectable].flat(1)

@@ -17,7 +17,7 @@ export const shortcuts: UserShortcuts<Theme> = [
   [
     /^(?:du-)?button-text$/,
     () =>
-      `${buttonBase} bg-transparent border-transparent text-theme-base hover:text-theme-base hover:text-decoration-line-underline focus:text-decoration-line-underline`
+      `${buttonBase} bg-transparent border-transparent text-theme-base hover:text-theme-base hover:decoration-underline focus:decoration-underline`
   ],
   [
     /^(?:du-)?button-(.+?)(?:-?(outlined))?$/,

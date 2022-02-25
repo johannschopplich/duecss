@@ -6,8 +6,8 @@
   --du-font-family-normal: system-ui, -apple-system, 'Segoe UI', Roboto,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --du-font-family-heading: var(--du-font-family-normal);
-  --du-line-height-normal: calc(1ex / 0.32);
-  --du-line-height-tight: calc(1ex / 0.42);
+  --du-line-height-normal: #{'calc(1ex / 0.32)'};
+  --du-line-height-tight: #{'calc(1ex / 0.42)'};
 
   --du-text-scale-ratio: 1.2;
   --du-text-lg: calc(1rem * var(--du-text-scale-ratio));

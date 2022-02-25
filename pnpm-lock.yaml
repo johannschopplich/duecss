@@ -5,7 +5,7 @@ specifiers:
   '@unocss/preset-uno': ^0.26.2
   bumpp: ^7.1.1
   prettier: ^2.5.1
-  sass: ^1.49.8
+  sass: ^1.49.9
   typescript: ^4.5.5
   unbuild: ^0.6.9
 
@@ -16,7 +16,7 @@ dependencies:
 devDependencies:
   bumpp: 7.1.1
   prettier: 2.5.1
-  sass: 1.49.8
+  sass: 1.49.9
   typescript: 4.5.5
   unbuild: 0.6.9
 
@@ -1205,8 +1205,8 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /sass/1.49.8:
-    resolution: {integrity: sha512-NoGOjvDDOU9og9oAxhRnap71QaTjjlzrvLnKecUJ3GxhaQBrV6e7gPuSPF28u1OcVAArVojPAe4ZhOXwwC4tGw==}
+  /sass/1.49.9:
+    resolution: {integrity: sha512-YlYWkkHP9fbwaFRZQRXgDi3mXZShslVmmo+FVK3kHLUELHHEYrCmL1x6IUjC7wLS6VuJSAFXRQS/DxdsC4xL1A==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:

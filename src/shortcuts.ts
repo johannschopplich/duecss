@@ -7,7 +7,7 @@ const buttonBase =
 export const shortcuts: UserShortcuts<Theme> = [
   [
     /^(?:du-)?title$/,
-    () => 'text-contrast-higher font-heading font-600 leading-tight'
+    () => 'text-contrast-higher font-heading font-600 leading-heading'
   ],
   [
     /^(?:du-)?control$/,

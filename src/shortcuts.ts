@@ -23,8 +23,8 @@ export const shortcuts: UserShortcuts<Theme> = [
     /^(?:du-)?button-(.+?)(?:-?(outlined))?$/,
     ([, color, outlined]) =>
       outlined
-        ? `${buttonBase} bg-transparent border-${color} text-${color} outline-color-${color} hover:bg-${color} hover:text-white focus:bg-${color} focus:text-white`
-        : `${buttonBase} bg-${color} border-transparent text-white outline-color-${color} hover:bg-${color}-600 hover:text-white focus:bg-${color}-600`
+        ? `${buttonBase} bg-transparent border-${color} text-${color} outline-${color} hover:bg-${color} hover:text-white focus:bg-${color} focus:text-white`
+        : `${buttonBase} bg-${color} border-transparent text-white outline-${color} hover:bg-${color}-600 hover:text-white focus:bg-${color}-600`
   ],
 
   // Global shortcuts

@@ -23,8 +23,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./*": "./styles/*"
   },
@@ -37,6 +37,9 @@
     "css": "sass styles/base/all.scss styles/base.css --style=expanded --no-source-map",
     "build": "pnpm run css && unbuild",
     "stub": "unbuild --stub",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
@@ -44,10 +47,14 @@
     "@unocss/preset-uno": "^0.27.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
     "bumpp": "^7.1.1",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
     "prettier": "^2.5.1",
     "sass": "^1.49.9",
-    "typescript": "^4.6.2",
+    "typescript": "~4.5",
     "unbuild": "^0.6.9"
   }
 }

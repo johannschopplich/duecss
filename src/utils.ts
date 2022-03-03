@@ -1,4 +1,22 @@
+import { escapeRegExp } from '@unocss/core'
 import type { Theme } from '@unocss/preset-uno'
+import type { VariantHandler } from '@unocss/core'
+
+export const variantMatcher = (
+  name: string,
+  selector?: (input: string) => string | undefined
+) => {
+  const re = new RegExp(`^${escapeRegExp(name)}[:-]`)
+  return (input: string): VariantHandler | undefined => {
+    const match = input.match(re)
+    if (match) {
+      return {
+        matcher: input.slice(match[0].length),
+        selector
+      }
+    }
+  }
+}
 
 function getThemeColor(theme: Theme, colors: string[]) {
   return theme.colors?.[

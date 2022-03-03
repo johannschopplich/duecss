@@ -11,11 +11,11 @@ export const variants: Variant<Theme>[] = [
       selector: (s) => `:root[data-theme="light"] ${s}`
     }
   },
-  // `du-light`
+  // `du-dark`
   (matcher) => {
     if (!matcher.startsWith('du-dark')) return matcher
     return {
-      // Slice `du-light:` prefix and pass to the next variants and rules
+      // Slice `du-dark:` prefix and pass to the next variants and rules
       matcher: matcher.slice(8),
       selector: (s) => `:root[data-theme="dark"] ${s}`
     }

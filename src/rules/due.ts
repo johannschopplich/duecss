@@ -4,9 +4,7 @@ import type { Rule } from '@unocss/core'
 export const due: Rule[] = [
   [
     /^(?:du-)?var-color-(.+)$/,
-    ([, body], { variantHandlers, theme }) => {
-      if (variantHandlers.length) return
-
+    ([, body], { theme }) => {
       const { color } = parseColor(body, theme) ?? {}
       if (!color) return
 

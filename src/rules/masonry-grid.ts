@@ -5,9 +5,7 @@ import type { Theme } from '@unocss/preset-uno'
 export const masonryGrid: Rule<Theme>[] = [
   [
     /^masonry-grid$/,
-    ([,], { rawSelector, variantHandlers }) => {
-      if (variantHandlers.length) return
-
+    ([,], { rawSelector }) => {
       return `
 .${e(rawSelector)} {
   display: grid;

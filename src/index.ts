@@ -1,6 +1,7 @@
 import { theme } from './theme'
 import { rules } from './rules'
 import { shortcuts } from './shortcuts'
+import { variants } from './variants'
 import type { Preset } from '@unocss/core'
 
 export * from './client'
@@ -24,7 +25,8 @@ export const presetDue = (): Preset => ({
   name: 'unocss-preset-due',
   theme,
   rules,
-  shortcuts
+  shortcuts,
+  variants
 })
 
 export default presetDue

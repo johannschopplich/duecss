@@ -43,18 +43,18 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
-    "@unocss/core": "^0.27.2",
-    "@unocss/preset-uno": "^0.27.2"
+    "@unocss/core": "^0.27.5",
+    "@unocss/preset-uno": "^0.27.5"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
     "bumpp": "^7.1.1",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.5.1",
     "sass": "^1.49.9",
     "typescript": "^4.6.2",
-    "unbuild": "^0.6.9"
+    "unbuild": "^0.7.0"
   }
 }

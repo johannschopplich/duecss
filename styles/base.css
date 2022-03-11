@@ -1,0 +1,119 @@
+:root {
+  --du-fluid-min-width: 320;
+  --du-fluid-max-width: 1140;
+
+  --du-fluid-screen: 100vw;
+  --du-fluid-bp: calc(
+    (var(--du-fluid-screen) - var(--du-fluid-min-width) / 16 * 1rem) /
+      (var(--du-fluid-max-width) - var(--du-fluid-min-width))
+  );
+
+  --du-font-family-normal: system-ui, -apple-system, 'Segoe UI', Roboto,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --du-font-family-heading: var(--du-font-family-normal);
+  --du-line-height-normal: #{'calc(1ex / 0.32)'};
+  --du-line-height-heading: #{'calc(1ex / 0.42)'};
+
+  --du-text-scale-ratio: 1.2;
+  --du-text-lg: calc(1rem * var(--du-text-scale-ratio));
+  --du-text-xl: calc(var(--du-text-lg) * var(--du-text-scale-ratio));
+  --du-text-2xl: calc(var(--du-text-xl) * var(--du-text-scale-ratio));
+  --du-text-3xl: calc(var(--du-text-2xl) * var(--du-text-scale-ratio));
+  --du-text-4xl: calc(var(--du-text-3xl) * var(--du-text-scale-ratio));
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --du-fluid-screen: calc(var(--du-fluid-max-width) * 1px);
+  }
+}
+
+:root:not([data-theme]),
+[data-theme='light'] {
+  /* Shades (zinc color from Tailwind CSS) */
+  --du-color-contrast-lowest: #f4f4f5; /* 100 */
+  --du-color-contrast-lower: #e4e4e7; /* 200 */
+  --du-color-contrast-low: #d4d4d8; /* 300 */
+  --du-color-contrast-medium: #71717a; /* 500 */
+  --du-color-contrast-high: #27272a; /* 800 */
+  --du-color-contrast-higher: #18181b; /* 900 */
+
+  /* Semantic color definitions */
+  --du-color-background: white;
+  --du-color-text: var(--du-color-contrast-higher);
+  --du-color-link: var(--du-color-primary);
+  --du-color-link-hover: var(--du-color-text);
+}
+
+[data-theme='dark'] {
+  /* Shades */
+  --du-color-contrast-lowest: #27272a; /* 800 */
+  --du-color-contrast-lower: #3f3f46; /* 700 */
+  --du-color-contrast-low: #52525b; /* 600 */
+  --du-color-contrast-medium: #a1a1aa; /* 400 */
+  --du-color-contrast-high: #f4f4f5; /* 100 */
+  --du-color-contrast-higher: #f9fafb; /* 50 */
+
+  /* Semantic color definitions */
+  --du-color-background: #18181b; /* 900 */
+  --du-color-text: white;
+  --du-color-link: var(--du-color-primary);
+  --du-color-link-hover: var(--du-color-text);
+}
+
+[data-theme]:not(:root) {
+  color: var(--du-color-text);
+  background-color: var(--du-color-background);
+}
+
+html {
+  min-width: calc(1px * var(--du-fluid-min-width));
+  font-size: calc(1rem + (18 - 16) * var(--du-fluid-bp));
+  background-color: var(--du-color-background, white);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: var(--du-font-family-normal);
+  line-height: var(--du-line-height-normal);
+  color: var(--du-color-text);
+}
+
+a {
+  cursor: pointer;
+  color: var(--du-color-link);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-color: currentcolor;
+  text-decoration-thickness: auto;
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  color: var(--du-color-link-hover);
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+[id] {
+  scroll-margin-top: 2ex;
+}
+
+/* Hide focus styles if they're not needed, for example,
+   when an element receives focus via the mouse */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Show focus styles on keyboard focus */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

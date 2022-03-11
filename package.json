@@ -34,8 +34,7 @@
     "styles"
   ],
   "scripts": {
-    "css": "sass styles/base/all.scss styles/base.css --style=expanded --no-source-map",
-    "build": "pnpm run css && unbuild",
+    "build": "unbuild",
     "stub": "unbuild --stub",
     "lint": "eslint \"src/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
@@ -54,7 +53,6 @@
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.5.1",
-    "sass": "^1.49.9",
     "typescript": "^4.6.2",
     "unbuild": "^0.7.0"
   }

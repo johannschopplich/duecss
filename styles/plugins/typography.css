@@ -1,0 +1,143 @@
+/* Adapted from https://github.com/unocss/unocss/tree/main/packages/preset-typography */
+.prose {
+  --du-prose-code: var(--du-color-contrast-higher);
+}
+
+.prose > :where(*:not(:last-child)) {
+  margin-bottom: calc(1rem * var(--du-prose-y-spacer, 1));
+}
+
+.prose :where(blockquote) {
+  font-style: italic;
+  border-left: 0.25rem solid var(--du-prose-borders, currentColor);
+  padding-left: 1.25rem;
+}
+
+.prose :where(h1, h2, h3, h4, h5, h6) {
+  font-weight: 600;
+  line-height: var(--du-line-height-heading);
+}
+
+.prose
+  :where(h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child)) {
+  margin-top: calc(2rem * var(--du-prose-y-spacer, 1));
+}
+
+.prose :where(h1) {
+  font-size: var(--du-text-3xl);
+}
+
+.prose :where(h2) {
+  font-size: var(--du-text-2xl);
+}
+
+.prose :where(h3) {
+  font-size: var(--du-text-xl);
+}
+
+.prose :where(h4) {
+  font-size: var(--du-text-lg);
+}
+
+.prose :where(figure) {
+  text-align: center;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.prose :where(figcaption) {
+  font-size: 0.875em;
+  margin-top: 0.5rem;
+}
+
+.prose :where(code) {
+  color: var(--du-prose-code);
+  font-size: 0.875em;
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    Liberation-Mono, Courier-New, monospace;
+}
+
+.prose :where(:not(pre) > code)::before,
+.prose :where(:not(pre) > code)::after {
+  content: '`';
+}
+
+.prose :where(pre) {
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  border-radius: 0.375rem;
+}
+
+.prose :where(pre, code) {
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  background: transparent;
+}
+
+.prose :where(pre code) {
+  font-weight: inherit;
+}
+
+.prose :where(ol, ul) {
+  padding-left: 1.25rem;
+}
+
+.prose :where(ul) {
+  list-style-type: disc;
+}
+
+.prose :where(ol > li::marker),
+.prose :where(ul > li::marker),
+.prose :where(summary::marker) {
+  color: var(--du-prose-lists, currentColor);
+}
+
+.prose :where(hr) {
+  margin: calc(2rem * var(--du-prose-y-spacer, 1)) auto;
+  border: 1px solid var(--du-prose-hr, currentColor);
+}
+
+.prose :where(table) {
+  display: block;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.prose :where(tr:nth-child(2n)) {
+  background: var(--du-color-contrast-lowest);
+}
+
+.prose :where(td, th) {
+  border: 1px solid var(--du-prose-borders, currentColor);
+  padding: 0.625rem 1rem;
+}
+
+.prose :where(abbr) {
+  cursor: help;
+}
+
+.prose :where(kbd) {
+  color: var(--du-prose-code);
+  border: 1px solid;
+  font-size: 0.875em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.prose :where(details) {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--du-color-contrast-lowest);
+}
+
+.prose :where(summary) {
+  cursor: pointer;
+  font-weight: 600;
+}

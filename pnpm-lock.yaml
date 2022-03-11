@@ -4,8 +4,8 @@ specifiers:
   '@babel/types': ^7.17.0
   '@typescript-eslint/eslint-plugin': ^5.14.0
   '@typescript-eslint/parser': ^5.14.0
-  '@unocss/core': ^0.27.5
-  '@unocss/preset-uno': ^0.27.5
+  '@unocss/core': ^0.28.0
+  '@unocss/preset-uno': ^0.28.0
   bumpp: ^7.1.1
   eslint: ^8.10.0
   eslint-config-prettier: ^8.5.0
@@ -15,8 +15,8 @@ specifiers:
   unbuild: ^0.7.0
 
 dependencies:
-  '@unocss/core': 0.27.5
-  '@unocss/preset-uno': 0.27.5
+  '@unocss/core': 0.28.0
+  '@unocss/preset-uno': 0.28.0
 
 devDependencies:
   '@babel/types': 7.17.0
@@ -355,29 +355,29 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@unocss/core/0.27.5:
-    resolution: {integrity: sha512-yslhPY1lWAkOANEtuyMpydWvNRYZdlS93xyOI4qCn3tWFFoA1H6ANehSQSUguNoEGIuRrB2hUazSnANtI8HYOg==}
+  /@unocss/core/0.28.0:
+    resolution: {integrity: sha512-/GlMY8mFlJfLJXN5IZo4gN69sOJJX0FjaB7KdQss659/Jr/gX3zVWjK/TiqXu78fBiHJJkhKAPnCZfZy2UYjxg==}
     dev: false
 
-  /@unocss/preset-mini/0.27.5:
-    resolution: {integrity: sha512-ZM6/qB2Jzf9nqU9/ALcPpDkjp1NDYrY+JGMCXqxb2FtT0PaPNFtxqOfJg3JBCX3ob3oTOeS2O1nRizREQngy/w==}
+  /@unocss/preset-mini/0.28.0:
+    resolution: {integrity: sha512-dBBPERIXiKEozSeHv0YIWJae4lbQv5RpUZSRCj0hdutICxS/kVqVLNTvPVodaiiZpnSv4GfrPyELIBZY5WJVtA==}
     dependencies:
-      '@unocss/core': 0.27.5
+      '@unocss/core': 0.28.0
     dev: false
 
-  /@unocss/preset-uno/0.27.5:
-    resolution: {integrity: sha512-ehsVpTGW9Cv45FHcgh9Hp45a/FeMUC0L39IHygVsTcr14CmSM1sDVuJRywIqbTpyi+Eu9uv+GppG9QGa3tbofw==}
+  /@unocss/preset-uno/0.28.0:
+    resolution: {integrity: sha512-q43nEch7rM7Vkuu4G9T4rkzrri8rJELYPlvPEzSzMBsZHa8+ql71pDbFqBdjD1djJppHPilzyEwUVkCQuAuRJg==}
     dependencies:
-      '@unocss/core': 0.27.5
-      '@unocss/preset-mini': 0.27.5
-      '@unocss/preset-wind': 0.27.5
+      '@unocss/core': 0.28.0
+      '@unocss/preset-mini': 0.28.0
+      '@unocss/preset-wind': 0.28.0
     dev: false
 
-  /@unocss/preset-wind/0.27.5:
-    resolution: {integrity: sha512-1Pw4aj+DrHCfus76BUGXmf7O44M9rN9ED1WMc/p4+MWT9zZ0GX2bQNTUGC/FXhptEKT2qNqDVm8tt1cFtlbxSw==}
+  /@unocss/preset-wind/0.28.0:
+    resolution: {integrity: sha512-zFgj4Prm4MmjnoDSLL8mT4vl0B6SVi9uiXnO/bTu4kO1aRQYKjCMG5Sx8WETkTQerwt1dfmapfzAaWERpMG+qA==}
     dependencies:
-      '@unocss/core': 0.27.5
-      '@unocss/preset-mini': 0.27.5
+      '@unocss/core': 0.28.0
+      '@unocss/preset-mini': 0.28.0
     dev: false
 
   /acorn-jsx/5.3.2_acorn@8.7.0:

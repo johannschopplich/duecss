@@ -3,6 +3,15 @@
 //
 
 :root {
+  --du-fluid-min-width: 320;
+  --du-fluid-max-width: 1140;
+
+  --du-fluid-screen: 100vw;
+  --du-fluid-bp: calc(
+    (var(--du-fluid-screen) - var(--du-fluid-min-width) / 16 * 1rem) /
+      (var(--du-fluid-max-width) - var(--du-fluid-min-width))
+  );
+
   --du-font-family-normal: system-ui, -apple-system, 'Segoe UI', Roboto,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --du-font-family-heading: var(--du-font-family-normal);
@@ -15,6 +24,12 @@
   --du-text-2xl: calc(var(--du-text-xl) * var(--du-text-scale-ratio));
   --du-text-3xl: calc(var(--du-text-2xl) * var(--du-text-scale-ratio));
   --du-text-4xl: calc(var(--du-text-3xl) * var(--du-text-scale-ratio));
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --du-fluid-screen: calc(var(--du-fluid-max-width) * 1px);
+  }
 }
 
 //

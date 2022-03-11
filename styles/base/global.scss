@@ -1,10 +1,8 @@
 @use '../abstracts/functions';
 
 html {
-  // Scales the `font-size` from a minimum of 16px (at a 320px viewport) to a
-  // maximum of 18px (at a 1280px viewport)
-  @include functions.fluid-scale(16px, 18px);
   min-width: 320px;
+  font-size: calc(1rem + (18 - 16) * var(--du-fluid-bp));
   background-color: var(--du-color-background, white);
   overflow-x: hidden;
   overflow-y: scroll;

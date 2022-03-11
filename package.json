@@ -1,6 +1,6 @@
 {
   "name": "duecss",
-  "version": "0.23.6",
+  "version": "0.24.0",
   "description": "Minimal CSS framework built upon & extended by UnoCSS",
   "keywords": [
     "unocss",
@@ -43,8 +43,8 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
-    "@unocss/core": "^0.27.5",
-    "@unocss/preset-uno": "^0.27.5"
+    "@unocss/core": "^0.28.0",
+    "@unocss/preset-uno": "^0.28.0"
   },
   "devDependencies": {
     "@babel/types": "^7.17.0",

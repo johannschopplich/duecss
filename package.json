@@ -42,15 +42,15 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "peerDependencies": {
-    "@unocss/core": "^0.29",
-    "@unocss/preset-uno": "^0.29"
+    "@unocss/core": "^0.29.1",
+    "@unocss/preset-uno": "^0.29.1"
   },
   "devDependencies": {
     "@babel/types": "^7.17.0",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
-    "@unocss/core": "^0.29.0",
-    "@unocss/preset-uno": "^0.29.0",
+    "@unocss/core": "^0.29.1",
+    "@unocss/preset-uno": "^0.29.1",
     "bumpp": "^7.1.1",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",

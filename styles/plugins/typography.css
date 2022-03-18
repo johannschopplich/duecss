@@ -4,7 +4,7 @@
 }
 
 .prose > :where(*:not(:last-child)) {
-  margin-bottom: calc(1rem * var(--du-prose-y-spacer, 1));
+  margin-bottom: calc(1rem * var(--du-prose-space-y, 1));
 }
 
 .prose :where(blockquote) {
@@ -20,7 +20,7 @@
 
 .prose
   :where(h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child)) {
-  margin-top: calc(2rem * var(--du-prose-y-spacer, 1));
+  margin-top: calc(2rem * var(--du-prose-space-y, 1));
 }
 
 .prose :where(h1) {
@@ -90,18 +90,22 @@
   padding-left: 1.25rem;
 }
 
+.prose :where(ol) {
+  list-style-type: decimal;
+}
+
 .prose :where(ul) {
   list-style-type: disc;
 }
 
-.prose :where(ol > li::marker),
-.prose :where(ul > li::marker),
-.prose :where(summary::marker) {
+.prose :where(ol > li)::marker,
+.prose :where(ul > li)::marker,
+.prose :where(summary)::marker {
   color: var(--du-prose-lists, currentColor);
 }
 
 .prose :where(hr) {
-  margin: calc(2rem * var(--du-prose-y-spacer, 1)) auto;
+  margin: calc(2rem * var(--du-prose-space-y, 1)) auto;
   border: 1px solid var(--du-prose-hr, currentColor);
 }
 

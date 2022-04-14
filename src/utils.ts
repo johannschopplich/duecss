@@ -1,5 +1,5 @@
 import { escapeRegExp } from '@unocss/core'
-import type { Theme } from '@unocss/preset-uno'
+import type { Theme } from '@unocss/preset-wind'
 import type { VariantHandler } from '@unocss/core'
 
 export const variantMatcher = (
@@ -34,6 +34,7 @@ export const parseColor = (body: string, theme: Theme) => {
 
   let colorData
   const [scale] = colors.slice(-1)
+
   if (scale.match(/^\d+$/)) {
     no = scale
     colorData = getThemeColor(theme, colors.slice(0, -1))

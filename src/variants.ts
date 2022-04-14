@@ -1,5 +1,5 @@
 import type { Variant } from '@unocss/core'
-import type { Theme } from '@unocss/preset-uno'
+import type { Theme } from '@unocss/preset-wind'
 import { variantMatcher } from './utils'
 
 export const variants: Variant<Theme>[] = [

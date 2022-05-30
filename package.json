@@ -3,33 +3,32 @@
   "version": "0.25.11",
   "packageManager": "pnpm@7.1.7",
   "description": "Minimal CSS framework built upon & extended by UnoCSS",
-  "keywords": [
-    "unocss",
-    "unocss-preset"
-  ],
+  "author": "Johann Schopplich <pkg@johannschopplich.com>",
+  "license": "MIT",
   "homepage": "https://github.com/johannschopplich/duecss#readme",
-  "bugs": {
-    "url": "https://github.com/johannschopplich/duecss/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johannschopplich/duecss.git"
   },
-  "license": "MIT",
-  "author": {
-    "name": "Johann Schopplich",
-    "email": "pkg@johannschopplich.com",
-    "url": "https://johannschopplich.com"
+  "bugs": {
+    "url": "https://github.com/johannschopplich/duecss/issues"
   },
+  "keywords": [
+    "unocss",
+    "unocss-preset"
+  ],
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     },
     "./*": "./styles/*"
   },
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "styles"

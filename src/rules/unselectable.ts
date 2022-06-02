@@ -6,7 +6,7 @@ export const unselectable: Rule[] = [
     {
       '-webkit-touch-callout': 'none',
       '-webkit-user-select': 'none',
-      'user-select': 'none'
-    }
-  ]
+      'user-select': 'none',
+    },
+  ],
 ]

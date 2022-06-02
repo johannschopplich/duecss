@@ -14,11 +14,11 @@ export const hyphenate: Rule[] = [
       '-webkit-hyphenate-limit-last': 'always',
       '-webkit-hyphenate-limit-zone': '8%',
 
-      hyphens: 'auto',
+      'hyphens': 'auto',
       'hyphenate-limit-chars': '6 3 3',
       'hyphenate-limit-lines': '2',
       'hyphenate-limit-last': 'always',
-      'hyphenate-limit-zone': '8%'
-    }
-  ]
+      'hyphenate-limit-zone': '8%',
+    },
+  ],
 ]

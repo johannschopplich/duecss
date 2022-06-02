@@ -7,9 +7,7 @@ interface Grid {
 }
 
 const composeGrid = (grid: Grid) => {
-  const columns = getComputedStyle(grid.el).gridTemplateColumns.split(
-    ' '
-  ).length
+  const columns = getComputedStyle(grid.el).gridTemplateColumns.split(' ').length
 
   for (const column of grid.items) {
     const { height } = column.getBoundingClientRect()
@@ -33,7 +31,8 @@ const composeGrid = (grid: Grid) => {
     if (grid.columns > 1) {
       for (const [index, column] of grid.items.slice(columns).entries()) {
         // Bottom edge of item above
-        const { bottom: prevBottom } = grid.items[index].getBoundingClientRect()
+        const { bottom: prevBottom }
+          = grid.items[index].getBoundingClientRect()
         // Top edge of current item
         const { top } = column.getBoundingClientRect()
 
@@ -49,10 +48,12 @@ export const masonryGridPolyfill = (selectors = '.masonry-grid') => {
   const elements = [...document.querySelectorAll<HTMLElement>(selectors)]
 
   // Bail if no elements where found
-  if (!elements.length) return
+  if (!elements.length)
+    return
 
   // Bail if masonry layouts are already supported by the browser
-  if (getComputedStyle(elements[0]).gridTemplateRows === 'masonry') return
+  if (getComputedStyle(elements[0]).gridTemplateRows === 'masonry')
+    return
 
   for (const el of elements) {
     const grid: Grid = {
@@ -60,9 +61,9 @@ export const masonryGridPolyfill = (selectors = '.masonry-grid') => {
       gap: parseFloat(getComputedStyle(el).rowGap),
       items: ([...el.childNodes] as HTMLElement[])
         // Make sure the child nodes are element nodes
-        .filter((i) => i.nodeType === 1),
+        .filter(i => i.nodeType === 1),
       columns: 0,
-      count: 0
+      count: 0,
     }
 
     composeGrid(grid)

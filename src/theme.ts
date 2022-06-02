@@ -13,7 +13,7 @@ export const theme: Theme = {
       600: '#4f46e5',
       700: '#4338ca',
       800: '#3730a3',
-      900: '#312e81'
+      900: '#312e81',
     },
     accent: {
       DEFAULT: '#f43f5e',
@@ -26,15 +26,15 @@ export const theme: Theme = {
       600: '#e11d48',
       700: '#be123c',
       800: '#9f1239',
-      900: '#881337'
+      900: '#881337',
     },
     link: {
       DEFAULT: 'var(--du-color-link)',
-      hover: 'var(--du-color-link-hover)'
+      hover: 'var(--du-color-link-hover)',
     },
     theme: {
       base: 'var(--du-color-text)',
-      background: 'var(--du-color-background)'
+      background: 'var(--du-color-background)',
     },
     contrast: {
       lowest: 'var(--du-color-contrast-lowest)',
@@ -42,28 +42,28 @@ export const theme: Theme = {
       low: 'var(--du-color-contrast-low)',
       medium: 'var(--du-color-contrast-medium)',
       high: 'var(--du-color-contrast-high)',
-      higher: 'var(--du-color-contrast-higher)'
-    }
+      higher: 'var(--du-color-contrast-higher)',
+    },
   },
   borderRadius: {
-    DEFAULT: '0.125rem'
+    DEFAULT: '0.125rem',
   },
   fontSize: {
-    xs: ['0.75rem', 'var(--du-line-height-normal)'],
-    sm: ['0.875rem', 'var(--du-line-height-normal)'],
-    base: ['1rem', 'var(--du-line-height-normal)'],
-    lg: ['var(--du-text-lg)', 'var(--du-line-height-heading)'],
-    xl: ['var(--du-text-xl)', 'var(--du-line-height-heading)'],
+    'xs': ['0.75rem', 'var(--du-line-height-normal)'],
+    'sm': ['0.875rem', 'var(--du-line-height-normal)'],
+    'base': ['1rem', 'var(--du-line-height-normal)'],
+    'lg': ['var(--du-text-lg)', 'var(--du-line-height-heading)'],
+    'xl': ['var(--du-text-xl)', 'var(--du-line-height-heading)'],
     '2xl': ['var(--du-text-2xl)', 'var(--du-line-height-heading)'],
     '3xl': ['var(--du-text-3xl)', 'var(--du-line-height-heading)'],
-    '4xl': ['var(--du-text-4xl)', 'var(--du-line-height-heading)']
+    '4xl': ['var(--du-text-4xl)', 'var(--du-line-height-heading)'],
   },
   fontFamily: {
     normal: 'var(--du-font-family-normal)',
-    heading: 'var(--du-font-family-heading)'
+    heading: 'var(--du-font-family-heading)',
   },
   lineHeight: {
     normal: 'var(--du-line-height-normal)',
-    heading: 'var(--du-line-height-heading)'
-  }
+    heading: 'var(--du-line-height-heading)',
+  },
 }

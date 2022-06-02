@@ -1,8 +1,8 @@
+import type { Preset } from '@unocss/core'
 import { theme } from './theme'
 import { rules } from './rules'
 import { shortcuts } from './shortcuts'
 import { variants } from './variants'
-import type { Preset } from '@unocss/core'
 
 export * from './client'
 
@@ -26,7 +26,7 @@ export const presetDue = (): Preset => ({
   theme,
   rules,
   shortcuts,
-  variants
+  variants,
 })
 
 export default presetDue

@@ -26,9 +26,9 @@
     },
     "./*": "./styles/*"
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "styles"
@@ -36,9 +36,8 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
-    "lint": "eslint \"src/**/*.ts\"",
-    "lint:fix": "npm run lint -- --fix",
-    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "release": "bumpp package.json --commit --push --tag"
   },
   "peerDependencies": {
@@ -46,15 +45,11 @@
     "@unocss/preset-wind": "*"
   },
   "devDependencies": {
-    "@babel/types": "^7.18.4",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
-    "@unocss/core": "^0.36.0",
-    "@unocss/preset-wind": "^0.36.0",
+    "@antfu/eslint-config": "^0.25.0",
+    "@unocss/core": "^0.37.2",
+    "@unocss/preset-wind": "^0.37.2",
     "bumpp": "^7.1.1",
     "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.6.2",
     "typescript": "^4.7.2",
     "unbuild": "^0.7.4"
   }

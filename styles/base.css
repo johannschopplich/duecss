@@ -1,7 +1,6 @@
 :root {
   --du-fluid-min-width: 320;
   --du-fluid-max-width: 1140;
-
   --du-fluid-screen: 100vw;
   --du-fluid-bp: calc(
     (var(--du-fluid-screen) - var(--du-fluid-min-width) / 16 * 1rem) /
@@ -68,7 +67,7 @@
 
 html {
   min-width: calc(1px * var(--du-fluid-min-width));
-  font-size: calc(1rem + (18 - 16) * var(--du-fluid-bp));
+  font-size: calc(1rem + (var(--du-fluid-max-font-size, 18) - 16) * var(--du-fluid-bp));
   background-color: var(--du-color-background, white);
   overflow-x: hidden;
   overflow-y: scroll;

@@ -45,11 +45,11 @@
     "@unocss/preset-wind": "*"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.25.1",
-    "@unocss/core": "^0.39.3",
-    "@unocss/preset-wind": "^0.39.3",
+    "@antfu/eslint-config": "^0.25.2",
+    "@unocss/core": "^0.44.1",
+    "@unocss/preset-wind": "^0.44.1",
     "bumpp": "^8.2.1",
-    "eslint": "^8.18.0",
+    "eslint": "^8.19.0",
     "typescript": "^4.7.4",
     "unbuild": "^0.7.4"
   }

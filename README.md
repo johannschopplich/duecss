@@ -1,7 +1,5 @@
 # DueCSS
 
-> ℹ️ Still work in progress.
-
 A minimal CSS framework, built upon UnoCSS.
 
 It extends the Tailwind CSS reset, adds sensible [global defaults](./styles/base/global.scss) as well as some generic [rules](./src/rules) and [shortcuts](./src/shortcuts.ts).

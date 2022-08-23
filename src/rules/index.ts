@@ -1,4 +1,4 @@
-import type { Rule } from '@unocss/core'
+import type { Rule } from 'unocss'
 import { due } from './due'
 import { hyphenate } from './hyphenate'
 import { unselectable } from './unselectable'

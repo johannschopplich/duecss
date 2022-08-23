@@ -1,6 +1,6 @@
-import { escapeRegExp } from '@unocss/core'
+import { escapeRegExp } from 'unocss'
 import type { Theme } from '@unocss/preset-wind'
-import type { VariantHandler } from '@unocss/core'
+import type { VariantHandler } from 'unocss'
 
 export const variantMatcher = (
   name: string,

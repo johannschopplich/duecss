@@ -1,4 +1,4 @@
-import type { Preset } from '@unocss/core'
+import type { Preset } from 'unocss'
 import { theme } from './theme'
 import { rules } from './rules'
 import { shortcuts } from './shortcuts'

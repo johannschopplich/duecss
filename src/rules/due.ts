@@ -1,4 +1,4 @@
-import type { Rule } from '@unocss/core'
+import type { Rule } from 'unocss'
 import { parseColor } from '../utils'
 
 export const due: Rule[] = [

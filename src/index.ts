@@ -4,8 +4,6 @@ import { rules } from './rules'
 import { shortcuts } from './shortcuts'
 import { variants } from './variants'
 
-export * from './client'
-
 /**
  * DueCSS Preset
  *
@@ -21,12 +19,14 @@ export * from './client'
  *   ]
  * })
  */
-export const presetDue = (): Preset => ({
-  name: 'unocss-preset-due',
-  theme,
-  rules,
-  shortcuts,
-  variants,
-})
+export function presetDue(): Preset {
+  return {
+    name: 'unocss-preset-due',
+    theme,
+    rules,
+    shortcuts,
+    variants,
+  }
+}
 
 export default presetDue

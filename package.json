@@ -24,11 +24,23 @@
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
     },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "require": "./dist/client.cjs",
+      "import": "./dist/client.mjs"
+    },
     "./*": "./styles/*"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "client": [
+        "./dist/client.d.ts"
+      ]
+    }
+  },
   "files": [
     "dist",
     "styles"

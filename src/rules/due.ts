@@ -1,16 +1,16 @@
-import type { Rule } from 'unocss'
-import { parseColor } from '../utils'
+import type { Rule } from '@unocss/core'
+import { parseColor } from '@unocss/preset-mini/utils'
 
 export const due: Rule[] = [
   [
     /^(?:du-)?var-color-(.+)$/,
     ([, body], { theme }) => {
-      const { color } = parseColor(body, theme) ?? {}
-      if (!color)
+      const parsed = parseColor(body, theme)
+      if (!parsed)
         return
 
       return {
-        [`--du-color-${body}`]: color,
+        [`--du-color-${body}`]: parsed.color,
       }
     },
   ],

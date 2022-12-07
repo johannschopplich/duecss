@@ -25,7 +25,11 @@ Projects demonstrating the capabilities of DueCSS:
 ## Installation
 
 ```bash
-npm i duecss -D
+# pnpm
+pnpm add -D duecss
+
+# npm
+npm i -D duecss
 ```
 
 ## Usage
@@ -80,15 +84,13 @@ npm i duecss -D
    If you're using Sass, you can import DueCSS right into your main stylesheet (given a Vite context to resolve the import):
 
    ```scss
-   @use 'duecss/base/all';
-   // or for plain CSS stylesheets:
-   // @import "duecss/base";
+   @use 'duecss/reset';
+   @use 'duecss/base';
    ```
 
    You could also import DueCSS before your main CSS entrypoint in your main script:
 
    ```ts
-   // Or `duecss/base/all.scss` when using Sass
    import 'duecss/base.css'
    import './main.css'
    import 'uno.css'
@@ -108,7 +110,7 @@ npm i duecss -D
 
 ## Features
 
-For a full list of global custom properties, take a look inside [`root.scss`](./styles/base/root.scss).
+For a full list of global custom properties, take a look inside [`base.css`](./styles/base.css).
 
 ### Dark Mode
 
@@ -162,7 +164,7 @@ Use masonry layouts in your CSS today!
 To enable the polyfill, run it inside your client code. If your browser already supports masonry grids, it will skip initialization gracefully.
 
 ```ts
-import { masonryGridPolyfill } from 'duecss'
+import { masonryGridPolyfill } from 'duecss/client'
 
 masonryGridPolyfill()
 ```

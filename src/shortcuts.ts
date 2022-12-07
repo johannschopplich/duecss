@@ -1,4 +1,4 @@
-import type { UserShortcuts } from 'unocss'
+import type { UserShortcuts } from '@unocss/core'
 
 const buttonBase = 'appearance-none unselectable inline-flex items-center justify-center border leading-none px-3 py-2 rounded disabled:opacity-50'
 

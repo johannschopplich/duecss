@@ -21,7 +21,7 @@ export function masonryGridPolyfill(selectors = '.masonry-grid') {
     const grid: GridInstance = {
       el,
       items: ([...el.childNodes] as HTMLElement[])
-      // Make sure the child nodes are element nodes
+        // Make sure the child nodes are element nodes
         .filter(i => i.nodeType === 1),
       gap: parseFloat(getComputedStyle(el).rowGap),
       columns: 0,

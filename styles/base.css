@@ -7,8 +7,8 @@
       (var(--du-fluid-max-width) - var(--du-fluid-min-width))
   );
 
-  --du-font-family-normal: system-ui, -apple-system, 'Segoe UI', Roboto,
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --du-font-family-normal: system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --du-font-family-heading: var(--du-font-family-normal);
   --du-line-height-normal: calc(1ex / 0.32);
   --du-line-height-heading: calc(1ex / 0.42);
@@ -28,7 +28,7 @@
 }
 
 :root:not([data-theme]),
-[data-theme='light'] {
+[data-theme="light"] {
   /* Shades (zinc color from Tailwind CSS) */
   --du-color-contrast-lowest: #f4f4f5; /* 100 */
   --du-color-contrast-lower: #e4e4e7; /* 200 */
@@ -44,7 +44,7 @@
   --du-color-link-hover: var(--du-color-text);
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   /* Shades */
   --du-color-contrast-lowest: #27272a; /* 800 */
   --du-color-contrast-lower: #3f3f46; /* 700 */
@@ -67,7 +67,9 @@
 
 html {
   min-width: calc(1px * var(--du-fluid-min-width));
-  font-size: calc(1rem + (var(--du-fluid-max-font-size, 18) - 16) * var(--du-fluid-bp));
+  font-size: calc(
+    1rem + (var(--du-fluid-max-font-size, 18) - 16) * var(--du-fluid-bp)
+  );
   background-color: var(--du-color-background, white);
   overflow-x: hidden;
   overflow-y: scroll;

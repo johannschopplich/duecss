@@ -13,16 +13,13 @@ export const shortcuts: UserShortcuts = [
       'appearance-none block w-full leading-none border-contrast-lower px-3 py-2 rounded focus:border-primary focus-visible:outline-none',
   ],
   [
-    /^(?:du-)?button-text$/,
-    () =>
-      `${buttonBase} bg-transparent border-transparent text-theme-base hover:text-theme-base hover:decoration-underline focus:decoration-underline`,
-  ],
-  [
     /^(?:du-)?button-(.+?)(?:-?(outlined))?$/,
     ([, color, outlined]) =>
-      outlined
-        ? `${buttonBase} bg-transparent border-${color} text-${color} outline-${color} hover:bg-${color} hover:text-white focus:bg-${color} focus:text-white`
-        : `${buttonBase} bg-${color} border-transparent text-white outline-${color} hover:bg-${color}-600 hover:text-white focus:bg-${color}-600`,
+      color === 'text'
+        ? `${buttonBase} bg-transparent border-transparent text-theme-base hover:text-theme-base hover:decoration-underline focus:decoration-underline`
+        : outlined
+          ? `${buttonBase} bg-transparent border-${color} text-${color} outline-${color} hover:bg-${color} hover:text-white focus:bg-${color} focus:text-white`
+          : `${buttonBase} bg-${color} border-transparent text-white outline-${color} hover:bg-${color}-600 hover:text-white focus:bg-${color}-600`,
   ],
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {

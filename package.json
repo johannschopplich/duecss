@@ -63,7 +63,7 @@
     "@unocss/preset-wind": "^0.49.1",
     "bumpp": "^8.2.1",
     "eslint": "^8.33.0",
-    "typescript": "^4.9.4",
+    "typescript": "^4.9.5",
     "unbuild": "^1.1.1",
     "unocss": "^0.49.1"
   }

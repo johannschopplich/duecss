@@ -49,7 +49,7 @@ function renderGrid(grid: GridInstance) {
   }
 
   // Bail if the number of columns hasn't changed
-  if (grid.columns === columns && grid.count)
+  if (grid.columns === columns && !grid.count)
     return
 
   // Update the number of columns

@@ -68,7 +68,9 @@
 html {
   min-width: calc(1px * var(--du-fluid-min-width));
   font-size: calc(
-    1rem + (var(--du-fluid-max-font-size, 18) - 16) * var(--du-fluid-bp)
+    ((var(--du-fluid-min-font-size, 16) / 16) * 1rem) +
+      (var(--du-fluid-max-font-size, 18) - var(--du-fluid-min-font-size, 16)) *
+      var(--du-fluid-bp)
   );
   background-color: var(--du-color-background, white);
   overflow-x: hidden;

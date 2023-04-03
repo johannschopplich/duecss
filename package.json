@@ -57,14 +57,14 @@
     "unocss": "*"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.0",
+    "@antfu/eslint-config": "^0.38.2",
     "@unocss/core": "^0.50.6",
     "@unocss/preset-mini": "^0.50.6",
     "@unocss/preset-wind": "^0.50.6",
     "bumpp": "^9.1.0",
     "eslint": "^8.37.0",
-    "typescript": "^5.0.2",
-    "unbuild": "^1.1.2",
+    "typescript": "^5.0.3",
+    "unbuild": "^1.2.0",
     "unocss": "^0.50.6"
   }
 }

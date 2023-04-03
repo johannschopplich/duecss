@@ -3,17 +3,17 @@
   --du-prose-code: var(--du-color-contrast-higher);
 }
 
-.prose > :where(*:not(:last-child)) {
+.prose > :where(*:not(:last-child)):not(:where(.not-prose, .not-prose *)) {
   margin-bottom: calc(1rem * var(--du-prose-space-y, 1));
 }
 
-.prose :where(blockquote) {
+.prose :where(blockquote):not(:where(.not-prose, .not-prose *)) {
   font-style: italic;
   border-left: 0.25rem solid var(--du-prose-borders, currentColor);
   padding-left: 1.25rem;
 }
 
-.prose :where(h1, h2, h3, h4, h5, h6) {
+.prose :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
   font-weight: 600;
   line-height: var(--du-line-height-heading);
 }
@@ -26,38 +26,38 @@
     h4:not(:first-child),
     h5:not(:first-child),
     h6:not(:first-child)
-  ) {
+  ):not(:where(.not-prose, .not-prose *)) {
   margin-top: calc(2rem * var(--du-prose-space-y, 1));
 }
 
-.prose :where(h1) {
+.prose :where(h1):not(:where(.not-prose, .not-prose *)) {
   font-size: var(--du-text-3xl);
 }
 
-.prose :where(h2) {
+.prose :where(h2):not(:where(.not-prose, .not-prose *)) {
   font-size: var(--du-text-2xl);
 }
 
-.prose :where(h3) {
+.prose :where(h3):not(:where(.not-prose, .not-prose *)) {
   font-size: var(--du-text-xl);
 }
 
-.prose :where(h4) {
+.prose :where(h4):not(:where(.not-prose, .not-prose *)) {
   font-size: var(--du-text-lg);
 }
 
-.prose :where(figure) {
+.prose :where(figure):not(:where(.not-prose, .not-prose *)) {
   text-align: center;
   margin-right: 0;
   margin-left: 0;
 }
 
-.prose :where(figcaption) {
+.prose :where(figcaption):not(:where(.not-prose, .not-prose *)) {
   font-size: 0.875em;
   margin-top: 0.5rem;
 }
 
-.prose :where(code) {
+.prose :where(code):not(:where(.not-prose, .not-prose *)) {
   color: var(--du-prose-code);
   font-size: 0.875em;
   font-weight: 600;
@@ -65,18 +65,18 @@
     Liberation-Mono, Courier-New, monospace;
 }
 
-.prose :where(:not(pre) > code)::before,
-.prose :where(:not(pre) > code)::after {
+.prose :where(:not(pre) > code):not(:where(.not-prose, .not-prose *))::before,
+.prose :where(:not(pre) > code):not(:where(.not-prose, .not-prose *))::after {
   content: "`";
 }
 
-.prose :where(pre) {
+.prose :where(pre):not(:where(.not-prose, .not-prose *)) {
   padding: 1.25rem 1.5rem;
   overflow-x: auto;
   border-radius: 0.375rem;
 }
 
-.prose :where(pre, code) {
+.prose :where(pre, code):not(:where(.not-prose, .not-prose *)) {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -89,53 +89,53 @@
   background: transparent;
 }
 
-.prose :where(pre code) {
+.prose :where(pre code):not(:where(.not-prose, .not-prose *)) {
   font-weight: inherit;
 }
 
-.prose :where(ol, ul) {
+.prose :where(ol, ul):not(:where(.not-prose, .not-prose *)) {
   padding-left: 1.25rem;
 }
 
-.prose :where(ol) {
+.prose :where(ol):not(:where(.not-prose, .not-prose *)) {
   list-style-type: decimal;
 }
 
-.prose :where(ul) {
+.prose :where(ul):not(:where(.not-prose, .not-prose *)) {
   list-style-type: disc;
 }
 
-.prose :where(ol > li)::marker,
-.prose :where(ul > li)::marker,
-.prose :where(summary)::marker {
+.prose :where(ol > li):not(:where(.not-prose, .not-prose *))::marker,
+.prose :where(ul > li):not(:where(.not-prose, .not-prose *))::marker,
+.prose :where(summary):not(:where(.not-prose, .not-prose *))::marker {
   color: var(--du-prose-lists, currentColor);
 }
 
-.prose :where(hr) {
+.prose :where(hr):not(:where(.not-prose, .not-prose *)) {
   margin: calc(2rem * var(--du-prose-space-y, 1)) auto;
   border: 1px solid var(--du-prose-hr, currentColor);
 }
 
-.prose :where(table) {
+.prose :where(table):not(:where(.not-prose, .not-prose *)) {
   display: block;
   border-collapse: collapse;
   overflow-x: auto;
 }
 
-.prose :where(tr:nth-child(2n)) {
+.prose :where(tr:nth-child(2n)):not(:where(.not-prose, .not-prose *)) {
   background: var(--du-color-contrast-lowest);
 }
 
-.prose :where(td, th) {
+.prose :where(td, th):not(:where(.not-prose, .not-prose *)) {
   border: 1px solid var(--du-prose-borders, currentColor);
   padding: 0.625rem 1rem;
 }
 
-.prose :where(abbr) {
+.prose :where(abbr):not(:where(.not-prose, .not-prose *)) {
   cursor: help;
 }
 
-.prose :where(kbd) {
+.prose :where(kbd):not(:where(.not-prose, .not-prose *)) {
   color: var(--du-prose-code);
   border: 1px solid;
   font-size: 0.875em;
@@ -143,12 +143,12 @@
   border-radius: 0.25rem;
 }
 
-.prose :where(details) {
+.prose :where(details):not(:where(.not-prose, .not-prose *)) {
   padding: 1.25rem 1.5rem;
   background-color: var(--du-color-contrast-lowest);
 }
 
-.prose :where(summary) {
+.prose :where(summary):not(:where(.not-prose, .not-prose *)) {
   cursor: pointer;
   font-weight: 600;
 }

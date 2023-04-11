@@ -23,8 +23,6 @@ export const shortcuts: UserShortcuts = [
   ],
   [/^column-(\d+)$/, ([, d]) => `flex-none w-${d}/12`],
   {
-    'masonry-grid':
-      'grid grid-cols-[repeat(auto-fit,minmax(min(var(--masonry-col-max-w,25rem),100%),1fr))] grid-rows-[masonry] justify-center children:self-start',
     'columns': 'flex flex-wrap',
     'column': 'block flex-1',
     'column-narrow': 'block flex-[0_0_auto] w-auto',

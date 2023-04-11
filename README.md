@@ -4,7 +4,7 @@ A minimal CSS framework, built upon [UnoCSS](https://github.com/unocss/unocss).
 
 It extends the Tailwind CSS reset, adds sensible [global defaults](./styles/base/global.scss) as well as some generic [rules](./src/rules) and [shortcuts](./src/shortcuts.ts).
 
-Sometimes, you may want to use all the power of an on-demand utility engine like UnoCSS or Tailwind, but write custom CSS as well, while accessing the color, spacing variables etc you've defined in your configuration. That's where DueCSS bridges the gap.
+Sometimes, you may want to use all the power of an on-demand utility engine like UnoCSS or Tailwind, but write custom CSS as well, while accessing the color, spacing variables etc. you've defined in your configuration. That's where DueCSS bridges the gap.
 
 ## Key Features
 
@@ -150,24 +150,6 @@ DueCSS will then generate and include the following global CSS custom properties
 ```
 
 Now you can reference to these color variables everywhere in your CSS code.
-
-## Masonry Grid Polyfill
-
-Use masonry layouts in your CSS today!
-
-```html
-<div class="masonry-grid gap-sm">
-  <!-- Grid items -->
-</div>
-```
-
-To enable the polyfill, run it inside your client code. If your browser already supports masonry grids, it will skip initialization gracefully.
-
-```ts
-import { masonryGridPolyfill } from 'duecss/client'
-
-masonryGridPolyfill()
-```
 
 ## License
 

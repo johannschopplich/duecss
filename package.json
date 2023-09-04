@@ -2,7 +2,7 @@
   "name": "duecss",
   "type": "module",
   "version": "0.30.0",
-  "packageManager": "pnpm@8.6.1",
+  "packageManager": "pnpm@8.7.1",
   "description": "Minimal CSS framework built upon & extended by UnoCSS",
   "author": "Johann Schopplich <pkg@johannschopplich.com>",
   "license": "MIT",
@@ -21,9 +21,14 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./*": "./styles/*"
   },
@@ -45,14 +50,14 @@
     "unocss": "*"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.5",
-    "@unocss/core": "^0.53.1",
-    "@unocss/preset-mini": "^0.53.1",
-    "@unocss/preset-wind": "^0.53.1",
-    "bumpp": "^9.1.1",
-    "eslint": "^8.42.0",
-    "typescript": "^5.1.3",
-    "unbuild": "^1.2.1",
-    "unocss": "^0.53.1"
+    "@antfu/eslint-config": "^0.41.0",
+    "@unocss/core": "^0.55.7",
+    "@unocss/preset-mini": "^0.55.7",
+    "@unocss/preset-wind": "^0.55.7",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.48.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
+    "unocss": "^0.55.7"
   }
 }

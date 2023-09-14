@@ -165,7 +165,7 @@ The following classes are available:
 
 | Class                     | Properties                             |
 | ------------------------- | -------------------------------------- |
-| `animate-[time]`          | `animation-name: name;`                |
+| `animate-[name]`          | `animation-name: name;`                |
 | `animate-duration-[time]` | `animation-duration: time;`            |
 | `animate-delay-[time]`    | `animation-delay: time;`               |
 | `animate-infinite`        | `animation-iteration-count: infinite;` |

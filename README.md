@@ -2,24 +2,21 @@
 
 A minimal CSS framework, built upon [UnoCSS](https://github.com/unocss/unocss).
 
-It extends the Tailwind CSS reset, adds sensible [global defaults](./styles/base/global.scss) as well as some generic [rules](./src/rules) and [shortcuts](./src/shortcuts.ts).
+It extends the Tailwind CSS reset, adds sensible [global defaults](./styles/base.css) as well as some generic [rules](./src/rules) and [shortcuts](./src/shortcuts.ts).
 
 Sometimes, you may want to use all the power of an on-demand utility engine like UnoCSS or Tailwind, but write custom CSS as well, while accessing the color, spacing variables etc. you've defined in your configuration. That's where DueCSS bridges the gap.
 
 ## Key Features
 
-- 🌙 Dark mode based on CSS custom properties
-- 🧶 Resilient set of base styles
-- 🧩 Use via Sass or as plain CSS
-- 🍱 CSS-first – reuse your custom properties everywhere
-- 🏵 Works well for [traditional setups like Kirby](https://github.com/johannschopplich/kirby-vite-unocss-kit)
+- 🧶 Resilient set of base styles and utilities
+- 🧩 [Typography plugin](./styles/plugins/typography.css)
+- 🌙 [Dark mode](./styles/base.css) based on CSS custom properties
+- 🏵 Works well for [traditional setups like Kirby CMS](https://github.com/johannschopplich/kirby-vite-unocss-kit)
 
 ## Built with DueCSS
 
 Projects demonstrating the capabilities of DueCSS:
 
-- [animere docs](https://github.com/johannschopplich/animere/blob/main/index.html) (plain Vite project)
-- [zahnarzt-schopplich.de](https://github.com/johannschopplich/zahnarzt-schopplich.de) (built with îles)
 - [johannschopplich.com](https://github.com/johannschopplich/johannschopplich.com) (built with Kirby)
 
 ## Installation
@@ -30,6 +27,9 @@ pnpm add -D duecss
 
 # npm
 npm i -D duecss
+
+# yarn
+yarn add -D duecss
 ```
 
 ## Usage
@@ -106,7 +106,7 @@ npm i -D duecss
    }
    ```
 
-   Now, use `font-normal` or `font-heading` in your components.
+   With these applied, you can use utilities like `font-normal` or `font-heading` in your components.
 
 ## Features
 
@@ -151,6 +151,26 @@ DueCSS will then generate and include the following global CSS custom properties
 
 Now you can reference to these color variables everywhere in your CSS code.
 
+### Utilities for Animate.css
+
+DueCSS lets you use [Animate.css](https://animate.style) by providing UnoCSS rules that provide utility-first access to the animations.
+
+```html
+<h1 class="animated animated-bounce animated-infinite">
+  Forever Bouncing Heading
+</h1>
+```
+
+The following classes are available:
+
+| Class                     | Properties                             |
+| ------------------------- | -------------------------------------- |
+| `animate-[time]`          | `animation-name: name;`                |
+| `animate-duration-[time]` | `animation-duration: time;`            |
+| `animate-delay-[time]`    | `animation-delay: time;`               |
+| `animate-infinite`        | `animation-iteration-count: infinite;` |
+| `animate-repeat-[n]`      | `animation-iteration-count: n;`        |
+
 ## License
 
-[MIT](./LICENSE) License © 2021-2023 [Johann Schopplich](https://github.com/johannschopplich)
+[MIT](./LICENSE) License © 2021-PRESENT [Johann Schopplich](https://github.com/johannschopplich)

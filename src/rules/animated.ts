@@ -10,7 +10,7 @@ export const durations = {
   slower: 3,
 } as const
 
-export const animatedRules: Rule<Theme>[] = [
+export const animated: Rule<Theme>[] = [
   ['animated', {
     '--une-animated-duration': '1s',
     'animation-duration': 'var(--une-animated-duration)',

@@ -12,8 +12,8 @@ export const durations = {
 
 export const animated: Rule<Theme>[] = [
   ['animated', {
-    '--une-animated-duration': '1s',
-    'animation-duration': 'var(--une-animated-duration)',
+    '--un-animated-duration': '1s',
+    'animation-duration': 'var(--un-animated-duration)',
     'animation-fill-mode': 'both',
   }],
   [
@@ -66,7 +66,7 @@ export const animated: Rule<Theme>[] = [
     ([_,, shortcut,, v]) => {
       if (shortcut) {
         return {
-          'animation-duration': `calc(var(--une-animated-duration) * ${durations[shortcut as keyof typeof durations]});`,
+          'animation-duration': `calc(var(--un-animated-duration) * ${durations[shortcut as keyof typeof durations]});`,
         }
       }
 

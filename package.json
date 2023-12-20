@@ -1,7 +1,7 @@
 {
   "name": "duecss",
   "type": "module",
-  "version": "0.31.3",
+  "version": "0.31.4",
   "packageManager": "pnpm@8.12.1",
   "description": "Minimal CSS framework built upon & extended by UnoCSS",
   "author": "Johann Schopplich <pkg@johannschopplich.com>",

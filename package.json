@@ -2,7 +2,7 @@
   "name": "duecss",
   "type": "module",
   "version": "0.31.3",
-  "packageManager": "pnpm@8.11.0",
+  "packageManager": "pnpm@8.12.1",
   "description": "Minimal CSS framework built upon & extended by UnoCSS",
   "author": "Johann Schopplich <pkg@johannschopplich.com>",
   "license": "MIT",
@@ -44,19 +44,21 @@
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "format": "prettier \"styles/**/*\" --write",
     "release": "bumpp --commit --push --tag"
   },
   "peerDependencies": {
     "unocss": "*"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.3.4",
+    "@antfu/eslint-config": "^2.4.6",
     "@unocss/core": "^0.58.0",
     "@unocss/preset-mini": "^0.58.0",
     "@unocss/preset-wind": "^0.58.0",
-    "bumpp": "^9.2.0",
-    "eslint": "^8.55.0",
-    "typescript": "^5.3.2",
+    "bumpp": "^9.2.1",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
     "unbuild": "^2.0.0",
     "unocss": "^0.58.0"
   }
